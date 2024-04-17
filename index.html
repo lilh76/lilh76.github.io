@@ -10,6 +10,26 @@
   gtag('config', 'UA-211172484-2');
 </script>
 
+<script>
+  function zoomImage() {
+    var img = document.getElementById('core3Image');
+    img.style.width = '100%'; // Set the image width to fill the page
+    img.style.height = '100%'; // Set the image height to fill the page
+    img.style.position = 'fixed';
+    img.style.top = '0';
+    img.style.left = '0';
+    img.style.zIndex = '9999';
+    img.style.backgroundColor = 'rgba(0,0,0,0.9)'; // Optional: Add a black overlay for better visibility
+    img.onclick = function() { // When clicked, restore original size
+      img.style.width = 'auto';
+      img.style.height = 'auto';
+      img.style.position = 'static';
+      img.style.zIndex = '0';
+      img.style.backgroundColor = 'transparent'; // Remove overlay
+    };
+  }
+</script>
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
@@ -119,7 +139,8 @@
 
           <tr style="vertical-align:left;">
             <td style="padding:20px;width:35%;vertical-align:center">
-              <img src="http://www.lamda.nju.edu.cn/lilh/images/core3.png" alt="core3" width="100%">
+              <!-- <img src="http://www.lamda.nju.edu.cn/lilh/images/core3.png" alt="core3" width="100%"> -->
+              <img id="core3Image" src="http://www.lamda.nju.edu.cn/lilh/images/core3.png" alt="core3" width="100%" onclick="zoomImage()">
             </td>
             <td style="padding:20px;width:75%;vertical-align:center">
               
