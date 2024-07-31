@@ -204,11 +204,6 @@
                 </td>
               </tr>
 
-
-
-              <a href="#" onclick="openNewTab()">bib</a>
-
-
               <tr style="vertical-align:left;">
                 <td style="padding:20px;width:35%;vertical-align:center">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/core3.png" target="_blank">
@@ -234,8 +229,19 @@
                         (IJCAI), 2024</strong></em></font>
                   <br>
                   <a href="http://www.lamda.nju.edu.cn/lilh/file/core3.pdf">pdf</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_core3.pdf">poster</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/bib/core3.bib">bibtex</a>
+                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_core3.pdf">poster</a> / 
+                    <a href="javascript:toggle_vis('bib')">bibtex</a>
+                    <div id="bib" style="display:none">
+                      <pre>
+                        @inproceedings&#123;costa,
+                          title     = &#123;Cost-aware Offline Safe Meta Reinforcement Learning with Robust In-Distribution Online Task Adaptation&#125;,
+                          author    = &#123;Cong Guan and Ruiqi Xue and Ziqian Zhang and Lihe Li and Yichen Li and Lei Yuan and Yang Yu&#125;,
+                          booktitle = &#123;Proceedings of the International Conference on Autonomous Agents and Multiagent Systems&#125;,
+                          year      = &#123;2024&#125;
+                        &#125;
+                      </pre>
+                    </div>
+
                   <p>We study the problem of multi-objective reinforcement learning (MORL) with continually evolving
                     learning objectives, and propose CORe3 to enable the MORL agent rapidly learn new objectives and
                     avoid catastrophic forgetting about old objectives lacking reward signals.
