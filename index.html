@@ -25,19 +25,13 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
-<script>
-  function openNewTab(bibType) {
-      var newWindow = window.open("", "_blank");
-      var content = "";
-
-      if (bibType === 'bib1') {
-          content = "<p>This is the text for bib1.</p>";
-      } else if (bibType === 'bib2') {
-          content = "<p>This is the text for bib2.</p>";
-      }
-
-      newWindow.document.write("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Text Page</title></head><body>" + content + "</body></html>");
-      newWindow.document.close();
+<script type="text/javascript">
+  function toggle_vis(id) {
+      var e = document.getElementById(id);
+      if (e.style.display == 'none')
+      e.style.display = 'inline';
+      else
+      e.style.display = 'none';
   }
 </script>
 
@@ -133,11 +127,6 @@
                       was accepted to <a href="http://www.adai.ai/dai/2023/index.html" target="_blank">DAI'23</a>🇸🇬
                       and won the <font color="#d04000"><em><strong>Best Paper Award</strong></em></font>!👏</li>
 
-                    <!-- <a href="javascript:toggle_vis('news')">----- show more -----</a>
-                    <div id="news" style="display:none">
-                      <li> xxx </li>
-                    </div> -->
-
                   </ul>
                 </td>
               </tr>
@@ -198,7 +187,18 @@
                   <font color="#38b000"><em><strong>Joint European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases
                         (ECML PKDD), 2024</strong></em></font>
                   <br>
-                  <a href="http://www.lamda.nju.edu.cn/lilh/file/dasar.pdf">pdf</a> / <a href="#" onclick="openNewTab('bib1')">bibtex</a>
+                  <a href="http://www.lamda.nju.edu.cn/lilh/file/dasar.pdf">pdf</a> / 
+                  <a href="javascript:toggle_vis('bib')">bibtex</a>
+                    <div id="bib" style="display:none">
+                      <pre>
+                        @inproceedings&#123;costa,
+                          title     = &#123;Cost-aware Offline Safe Meta Reinforcement Learning with Robust In-Distribution Online Task Adaptation&#125;,
+                          author    = &#123;Cong Guan and Ruiqi Xue and Ziqian Zhang and Lihe Li and Yichen Li and Lei Yuan and Yang Yu&#125;,
+                          booktitle = &#123;Proceedings of the International Conference on Autonomous Agents and Multiagent Systems&#125;,
+                          year      = &#123;2024&#125;
+                        &#125;
+                      </pre>
+                    </div>
                   <p>We propose DASaR, which expands the trust region in sim-to-real RL by aligning simulator and real-world value functions through inverse dynamics-based relabeling of rewards and costs.
                   </p>
                 </td>
