@@ -23,18 +23,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <style>
+    /* 定义btn-green类 */
+    .btn-green {
+        background-color: rgb(177, 235, 177);
+        color: black;
+    }
+  </style>
+
 </head>
 
 <script type="text/javascript">
   function toggle_vis(id) {
       var e = document.getElementById(id);
       if (e.style.display == 'none')
-      e.style.display = 'inline';
+      e.style.display = 'block';
       else
       e.style.display = 'none';
   }
+  
+  function copyText(elementId, elementId_button) {
+    // 获取code元素的HTML内容并替换HTML实体
+    var codeElement = document.getElementById(elementId);
+    var htmlContent = codeElement.innerHTML;
+    var textToCopy = htmlContent.replace(/<br>/g, "")
+                                .replace(/&nbsp;/g, " ");
+    
+    // 创建一个隐藏的文本区域元素
+    var textArea = document.createElement("textarea");
+    textArea.value = textToCopy;
+    
+    // 将文本区域元素添加到文档中
+    document.body.appendChild(textArea);
+    
+    // 选择文本区域的内容
+    textArea.select();
+    textArea.setSelectionRange(0, 99999); // 对移动设备兼容
+    
+    // 执行复制命令
+    document.execCommand("copy");
+    
+    // 移除临时的文本区域元素
+    document.body.removeChild(textArea);
+    
+    // 更改按钮的文本内容为 "Copied"
+    var buttonElement = document.getElementById(elementId_button);
+    buttonElement.innerText = "Copied";
+    buttonElement.style.backgroundColor = "#cdeeb5"; // 设置按钮背景颜色为灰色
+    
+    // 设置一个定时器，在几秒钟后将按钮的文本内容改回 "Copy"
+    setTimeout(function() {
+        buttonElement.innerText = "Copy";
+        buttonElement.style.backgroundColor = "#FFFFFF";
+    }, 2000); // 2秒后恢复
+}
 </script>
-
+  
 <body>
   <table
     style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -187,18 +232,16 @@
                   <font color="#38b000"><em><strong>Joint European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases
                         (ECML PKDD), 2024</strong></em></font>
                   <br>
-                  <a href="http://www.lamda.nju.edu.cn/lilh/file/dasar.pdf">pdf</a> / 
-                  <a href="javascript:toggle_vis('bib')">bibtex</a>
-                    <div id="bib" style="display:none">
-                      <pre>
-                        @inproceedings&#123;costa,
-                          title     = &#123;Cost-aware Offline Safe Meta Reinforcement Learning with Robust In-Distribution Online Task Adaptation&#125;,
-                          author    = &#123;Cong Guan and Ruiqi Xue and Ziqian Zhang and Lihe Li and Yichen Li and Lei Yuan and Yang Yu&#125;,
-                          booktitle = &#123;Proceedings of the International Conference on Autonomous Agents and Multiagent Systems&#125;,
-                          year      = &#123;2024&#125;
-                        &#125;
-                      </pre>
-                    </div>
+                  <a href="http://www.lamda.nju.edu.cn/lilh/file/dasar.pdf">pdf</a> / <a href="javascript:toggle_vis('bib_dasar')">bibtex</a>
+                  <div id="bib_dasar" style="display:none">
+                    <code id="bib_dasar_text" style="font-size: 7px; line-height: 0.01;">@inproceedings{dasar,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Dynamics Adaptive Safe Reinforcement Learning with a Misspecified Simulator},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Ruiqi Xue and Ziqian Zhang and Lihe Li and Feng Chen and Yi-Chen Li and Yang Yu and Lei Yuan},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Joint European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2024}<br>
+}</code><br>
+                    <button id="bib_dasar_button" onclick="copyText('bib_dasar_text', 'bib_dasar_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                  </div>
                   <p>We propose DASaR, which expands the trust region in sim-to-real RL by aligning simulator and real-world value functions through inverse dynamics-based relabeling of rewards and costs.
                   </p>
                 </td>
@@ -229,19 +272,16 @@
                         (IJCAI), 2024</strong></em></font>
                   <br>
                   <a href="http://www.lamda.nju.edu.cn/lilh/file/core3.pdf">pdf</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_core3.pdf">poster</a> / 
-                    <a href="javascript:toggle_vis('bib')">bibtex</a>
-                    <div id="bib" style="display:none">
-                      <pre>
-                        @inproceedings&#123;costa,
-                          title     = &#123;Cost-aware Offline Safe Meta Reinforcement Learning with Robust In-Distribution Online Task Adaptation&#125;,
-                          author    = &#123;Cong Guan and Ruiqi Xue and Ziqian Zhang and Lihe Li and Yichen Li and Lei Yuan and Yang Yu&#125;,
-                          booktitle = &#123;Proceedings of the International Conference on Autonomous Agents and Multiagent Systems&#125;,
-                          year      = &#123;2024&#125;
-                        &#125;
-                      </pre>
+                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_core3.pdf">poster</a> / <a href="javascript:toggle_vis('bib_core3')">bibtex</a>
+                    <div id="bib_core3" style="display:none">
+                      <code id="bib_core3_text" style="font-size: 7px; line-height: 0.01;">@inproceedings{core3,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Continual Multi-Objective Reinforcement Learning via Reward Model Rehearsal},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Lihe Li and Ruotong Chen and Ziqian Zhang and Zhichao Wu and Yi-Chen Li and Cong Guan and Yang Yu and Lei Yuan},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2024}<br>
+}</code><br>
+                      <button id="bib_core3_button" onclick="copyText('bib_core3_text', 'bib_core3_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
                     </div>
-
                   <p>We study the problem of multi-objective reinforcement learning (MORL) with continually evolving
                     learning objectives, and propose CORe3 to enable the MORL agent rapidly learn new objectives and
                     avoid catastrophic forgetting about old objectives lacking reward signals.
@@ -274,8 +314,17 @@
                   <font color="#38b000"><em><strong>The 12th International Conference on Learning Representations
                         (ICLR), Workshop on Large Language Model (LLM) Agents, 2024</strong></em></font>
                   <br>
-                  <a href="https://arxiv.org/pdf/2311.00416.pdf">pdf</a> / <a
-                    href="https://arxiv.org/abs/2311.00416">link</a> / <a href="http://www.lamda.nju.edu.cn/lilh/file/bib/haplan.bib">bibtex</a>
+                  <a href="https://openreview.net/pdf?id=M2fjpBP88K">pdf</a> / <a
+                    href="https://openreview.net/forum?id=M2fjpBP88K">link</a> / <a href="javascript:toggle_vis('bib_haplan')">bibtex</a>
+                    <div id="bib_haplan" style="display:none">
+                      <code id="bib_haplan_text" style="font-size: 7px; line-height: 0.01;">@inproceedings{haplan,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Efficient Human-{AI} Coordination via Preparatory Language-based Convention},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Cong Guan and Lichao Zhang and Chunpeng Fan and Yi-Chen Li and Feng Chen and Lihe Li and Yunjia Tian and Lei Yuan and Yang Yu},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{ICLR 2024 Workshop on Large Language Model (LLM) Agents},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2024}<br>
+}</code><br>
+                      <button id="bib_haplan_button" onclick="copyText('bib_haplan_text', 'bib_haplan_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
                   <p>We propose employing the large language models (LLMs) to develop an action plan (or equivalently, a
                     convention) that effectively guides both human and AI for coordination.
                   </p>
@@ -309,8 +358,16 @@
                   <a href="http://www.lamda.nju.edu.cn/lilh/file/costa.pdf">pdf</a> / <a
                     href="https://dl.acm.org/doi/10.5555/3635637.3662927">link</a> / <a
                     href="https://github.com/ApocalypseX/COSTA">code</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_costa.pdf">poster</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/bib/costa.bib">bibtex</a>
+                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_costa.pdf">poster</a> / <a href="javascript:toggle_vis('bib_costa')">bibtex</a>
+                    <div id="bib_costa" style="display:none">
+                      <code id="bib_costa_text" style="font-size: 7px; line-height: 0.01;">@inproceedings{costa,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Cost-aware Offline Safe Meta Reinforcement Learning with Robust In-Distribution Online Task Adaptation},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Cong Guan and Ruiqi Xue and Ziqian Zhang and Lihe Li and Yi-Chen Li and Lei Yuan and Yang Yu},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings of the International Conference on Autonomous Agents and Multiagent Systems},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2024}<br>
+}</code><br>
+                      <button id="bib_costa_button" onclick="copyText('bib_costa_text', 'bib_costa_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
                   <p>We propose COSTA to deal with offline safe meta RL problems. We develope a cost-aware task
                     inference module using contrastive learning to distinguish tasks based on safety constraints, and
                     propose a safe in-distribution online adapation mechanism.
@@ -359,7 +416,16 @@
                   <br>
                   <a href="https://arxiv.org/pdf/2312.01058.pdf">pdf in English</a> / <a
                     href="http://www.lamda.nju.edu.cn/lilh/file/openmarl.pdf">pdf in Chinese</a> / <a
-                    href="https://arxiv.org/abs/2312.01058">link</a> / <a href="http://www.lamda.nju.edu.cn/lilh/file/bib/survey.bib">bibtex</a>
+                    href="https://arxiv.org/abs/2312.01058">link</a> / <a href="javascript:toggle_vis('bib_survey')">bibtex</a>
+                    <div id="bib_survey" style="display:none">
+                      <code id="bib_survey_text" style="font-size: 7px; line-height: 0.01;">@article{survey,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;=&nbsp;{A Survey of Progress on Cooperative Multi-agent Reinforcement Learning in Open Environment},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;=&nbsp;{Lei Yuan and Ziqian Zhang and Lihe Li and Cong Guan and Yang Yu},<br>
+&nbsp;&nbsp;journal&nbsp;=&nbsp;{arXiv preprint arXiv:2312.01058},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2023}<br>
+}</code><br>
+                      <button id="bib_survey_button" onclick="copyText('bib_survey_text', 'bib_survey_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
                   <p>We review multi-agent cooperation from closed environment to open environment settings, and provide
                     prospects for future development and research directions of cooperative MARL in open environments.
                   </p>
@@ -387,7 +453,7 @@
                   <a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK">Yang Yu</a>,
                   <a href="https://cs.nju.edu.cn/zhouzh/index.htm">Zhi-Hua Zhou</a>
                   <br>
-                  <font color="#38b000"><em><strong>The Fifth Distributed Artificial Intelligence Conference (DAI),
+                  <font color="#38b000"><em><strong>Proceedings of the Fifth International Conference on Distributed Artificial Intelligence (DAI),
                       </strong></em></font>
                   <font color="#d04000"><em><strong>Best Paper Award</strong></em></font>
                   <font color="#38b000"><em><strong></strong>, 2023 </strong></em></font>
@@ -395,8 +461,16 @@
                   <a href="http://www.lamda.nju.edu.cn/lilh/file/macop.pdf">pdf</a> / <a
                     href="https://dl.acm.org/doi/10.1145/3627676.3627678">link</a> / <a
                     href="https://youtu.be/1a32LLUB9II">English talk</a> / <a
-                    href="https://www.bilibili.com/video/BV1KK411e7WJ/">Chinese talk</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/bib/macop.bib">bibtex</a>
+                    href="https://www.bilibili.com/video/BV1KK411e7WJ/">Chinese talk</a> / <a href="javascript:toggle_vis('bib_macop')">bibtex</a>
+                    <div id="bib_macop" style="display:none">
+                      <code id="bib_macop_text" style="font-size: 7px; line-height: 0.01;">@inproceedings{macop,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Learning to Coordinate with Anyone},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Lei Yuan and Lihe Li and Ziqian Zhang and Feng Chen and Tianyi Zhang and Cong Guan and Yang Yu and Zhi-Hua Zhou},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings of the Fifth International Conference on Distributed Artificial Intelligence},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2023}<br>
+}</code><br>
+  <button id="bib_macop_button" onclick="copyText('bib_macop_text', 'bib_macop_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+</div>
                   <p>We propose Multi-agent Compatible Policy Learning (MACOP), where we adopt an agent-centered
                     teammate generation process that gradually and efficiently generates diverse teammates covering the
                     teammate policy space, and we use continual learning to train the ego agents to coordinate with them
@@ -431,8 +505,17 @@
                   <br>
                   <a href="http://www.lamda.nju.edu.cn/lilh/file/fastap.pdf">pdf</a> / <a
                     href="https://proceedings.mlr.press/v216/zhang23a.html">link</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_fastap.pdf">poster</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/bib/fastap.bib">bibtex</a>
+                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_fastap.pdf">poster</a> / <a href="javascript:toggle_vis('bib_fastap')">bibtex</a>
+                    <div id="bib_fastap" style="display:none">
+                      <code id="bib_fastap_text" style="font-size: 7px; line-height: 0.01;">@inproceedings{fastap,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Fast Teammate Adaptation in the Presence of Sudden Policy Change},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Ziqian Zhang and Lei Yuan and Lihe Li and Ke Xue and Chengxing Jia and Cong Guan and Chao Qian and Yang Yu},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Uncertainty in Artificial Intelligence},<br>
+&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2465--2476},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2023}<br>
+}</code><br>
+                      <button id="bib_fastap_button" onclick="copyText('bib_fastap_text', 'bib_fastap_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
                   <p>We formulate Open Dec-POMDP and propose Fast teammate adaptation (Fastap) to enable controllable
                     agents in a multi-agent system to fast adapt to the uncontrollable teammates, whose policy could be
                     changed with one episode.
@@ -469,8 +552,17 @@
                   <a href="http://www.lamda.nju.edu.cn/lilh/file/romance.pdf">pdf</a> / <a
                     href="https://arxiv.org/abs/2305.05909">link</a> / <a
                     href="https://github.com/zzq-bot/ROMANCE">code</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_romance.pdf">poster</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/bib/romance.bib">bibtex</a>
+href="http://www.lamda.nju.edu.cn/lilh/file/poster_romance.pdf">poster</a> / <a href="javascript:toggle_vis('bib_romance')">bibtex</a>
+<div id="bib_romance" style="display:none">
+  <code id="bib_romance_text" style="font-size: 7px; line-height: 0.01;">@inproceedings{romance,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial Attackers},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Lei Yuan and Ziqian Zhang and Ke Xue and Hao Yin and Feng Chen and Cong Guan and Lihe Li and Chao Qian and Yang Yu},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings of the AAAI Conference on Artificial Intelligence},<br>
+&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{11753--11762},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2023}<br>
+}</code><br>
+  <button id="bib_romance_button" onclick="copyText('bib_romance_text', 'bib_romance_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+</div>
                   <p>We formulate Limited Policy Adversary Dec-POMDP and propose ROMANCE to enable the trained agents to
                     encounter diversified and strong auxiliary adversarial attacks during training, achieving high
                     robustness under various policy perturbations.
@@ -502,8 +594,16 @@
                   <a href="http://www.lamda.nju.edu.cn/lilh/file/cromac.pdf">pdf</a> / <a
                     href="https://www.sciengine.com/SCIS/doi/10.1007/s11432-023-3853-y;JSESSIONID=b521515b-711a-4dc2-9561-92e9c83a7aef">link</a>
                   / <a href="https://github.com/LAMDA-RL/CroMAC">code</a>
-                  / <a href="http://www.lamda.nju.edu.cn/lilh/file/poster_cromac.pdf">poster</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/bib/cromac.bib">bibtex</a>
+                  / <a href="http://www.lamda.nju.edu.cn/lilh/file/poster_cromac.pdf">poster</a> / <a href="javascript:toggle_vis('bib_cromac')">bibtex</a>
+                  <div id="bib_cromac" style="display:none">
+                    <code id="bib_cromac_text" style="font-size: 7px; line-height: 0.01;">@article{cromac,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;=&nbsp;{Robust Multi-agent Communication via Multi-view Message Certification},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;=&nbsp;{Lei Yuan and Tao Jiang and Lihe Li and Feng Chen and Zongzhang Zhang and Yang Yu},<br>
+&nbsp;&nbsp;journal&nbsp;=&nbsp;{SCIENCE CHINA Information Sciences},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2023}<br>
+}</code><br>
+                    <button id="bib_cromac_button" onclick="copyText('bib_cromac_text', 'bib_cromac_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                  </div>
                   <p>We propose CroMAC to enable agents to obtain guaranteed lower bounds on state-action values to
                     identify and choose the optimal action under a worst-case deviation when the received messages are
                     perturbed.
@@ -536,8 +636,16 @@
                   <a href="http://www.lamda.nju.edu.cn/lilh/file/macpro.pdf">pdf</a> / <a
                     href="https://ieeexplore.ieee.org/document/10562331">link</a> / <a
                     href="https://github.com/lilh76/MACPro">code</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_macpro.pdf">poster</a> / <a
-                    href="http://www.lamda.nju.edu.cn/lilh/file/bib/macpro.bib">bibtex</a>
+                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_macpro.pdf">poster</a> / <a href="javascript:toggle_vis('bib_macpro')">bibtex</a>
+                    <div id="bib_macpro" style="display:none">
+                      <code id="bib_macpro_text" style="font-size: 7px; line-height: 0.01;">@article{macpro,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;=&nbsp;{Multi-agent Continual Coordination via Progressive Task Contextualization},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;=&nbsp;{Lei Yuan and Lihe Li and Ziqian Zhang and Fuxiang Zhang and Cong Guan and Yang Yu},<br>
+&nbsp;&nbsp;journal&nbsp;=&nbsp;{IEEE Transactions on Neural Networks and Learning Systems},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2024}<br>
+}</code><br>
+                      <button id="bib_macpro_button" onclick="copyText('bib_macpro_text', 'bib_macpro_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
                   <p>We formulate the continual coordination framework and propose MACPro to enable agents to
                     continually coordinate with each other when the dynamic of the training task and the multi-agent
                     system itself changes over time.
