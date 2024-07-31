@@ -25,6 +25,22 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
+<script>
+  function openNewTab(bibType) {
+      var newWindow = window.open("", "_blank");
+      var content = "";
+
+      if (bibType === 'bib1') {
+          content = "<p>This is the text for bib1.</p>";
+      } else if (bibType === 'bib2') {
+          content = "<p>This is the text for bib2.</p>";
+      }
+
+      newWindow.document.write("<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Text Page</title></head><body>" + content + "</body></html>");
+      newWindow.document.close();
+  }
+</script>
+
 <body>
   <table
     style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -182,11 +198,16 @@
                   <font color="#38b000"><em><strong>Joint European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases
                         (ECML PKDD), 2024</strong></em></font>
                   <br>
-                  <a href="http://www.lamda.nju.edu.cn/lilh/file/dasar.pdf">pdf</a> / <a href="http://www.lamda.nju.edu.cn/lilh/file/bib/dasar.bib">bibtex</a>
+                  <a href="http://www.lamda.nju.edu.cn/lilh/file/dasar.pdf">pdf</a> / <a href="#" onclick="openNewTab('bib1')">bibtex</a>
                   <p>We propose DASaR, which expands the trust region in sim-to-real RL by aligning simulator and real-world value functions through inverse dynamics-based relabeling of rewards and costs.
                   </p>
                 </td>
               </tr>
+
+
+
+              <a href="#" onclick="openNewTab()">bib</a>
+
 
               <tr style="vertical-align:left;">
                 <td style="padding:20px;width:35%;vertical-align:center">
