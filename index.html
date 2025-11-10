@@ -30,6 +30,49 @@
         background-color: rgb(177, 235, 177);
         color: black;
     }
+    
+    /* 新增：博士机会通知样式 */
+    .phd-notice {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-left: 5px solid #4A90E2;
+      padding: 15px 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+    }
+    
+    .phd-notice h2 {
+      color: #2c3e50;
+      margin: 0 0 10px 0;
+      font-size: 1.5em;
+    }
+    
+    .phd-notice p {
+      margin: 5px 0;
+      color: #34495e;
+      font-size: 1.1em;
+    }
+    
+    .phd-notice .highlight {
+      background-color: #FFEB3B;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+    
+    .phd-notice .contact-info {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #2980b9;
+    }
+    
+    .phd-notice .emoji {
+      font-size: 1.2em;
+      margin: 0 5px;
+    }
   </style>
 
 </head>
@@ -81,6 +124,12 @@
 </script>
   
 <body>
+
+  <div class="phd-notice">
+    <h2><span class="emoji">🎓</span> Seeking PhD Opportunities <span class="emoji">🎓</span></h2>
+    <p>I am actively looking for <span class="highlight">PhD positions</span> starting in Fall 2026.</p>
+    <p class="contact-info">Feel free to reach out if you have potential opportunities! <span class="emoji">📧</span></p>
+  </div>
   <table
     style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tbody>
@@ -105,14 +154,14 @@
                   </details>
 
                   <p>
-                      Hi there, thanks for visiting my website! I am a M.Sc. student (Sep. 2023 - Now) at the <a href="https://ai.nju.edu.cn" target="_blank">School of
+                      Hi there, thanks for visiting my website! I am a Master student (Sep. 2023 - Now) at the <a href="https://ai.nju.edu.cn" target="_blank">School of
                         Artificial Intelligence</a> at <a href="https://www.nju.edu.cn/en/" target="_blank">Nanjing
                         University</a>, where I am fortunate to be advised by Prof. <a
                         href="http://www.lamda.nju.edu.cn/yuy" target="_blank">Yang Yu</a> and affiliated with the <a
                         href="http://www.lamda.nju.edu.cn/MainPage.ashx" target="_blank">LAMDA</a> Group led by Prof.
                         <a href="http://www.lamda.nju.edu.cn/zhouzh/" target="_blank">Zhi-Hua Zhou</a>. Specifically, I am a member of the <a
                         href="https://lamda-rl.nju.edu.cn" target="_blank">LAMDA-RL</a> Group, which focuses on reinforcement learning research.
-                        Prior to that, I obtained my bachelor's degree at the same school and university in June 2023.
+                        Prior to that, I was an undergraduate student at the same school and university in June 2023.
                   </p>
                   <p>
                     Unity makes strength. Currently my research interest is <b>Reinforcement Learning (RL)</b>, especially in <b>Multi-agent
