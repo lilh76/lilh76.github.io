@@ -13,22 +13,73 @@
   </script>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
   <title>Lihe Li</title>
-  <!-- <link rel="shortcut icon" type="image/x-icon" href="http://www.lamda.nju.edu.cn/lilh/images/head.ico" /> -->
   <link rel="icon" href="http://www.lamda.nju.edu.cn/lilh/images/head.ico">
-
   <meta name="author" content="Lihe Li">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
   <style>
-    /* 定义btn-green类 */
-    .btn-green {
-        background-color: rgb(177, 235, 177);
-        color: black;
+    .publication-row {
+      display: table-row;
+    }
+    
+    .image-cell {
+      display: table-cell;
+      padding: 20px;
+      width: 40%;
+      vertical-align: center;
+      box-sizing: border-box;
+    }
+    
+    .content-cell {
+      display: table-cell;
+      padding: 20px;
+      width: 70%; /* 注意：总宽度会超过100%，但浏览器会处理 */
+      vertical-align: center;
+      box-sizing: border-box;
+    }
+    
+    .pub-image {
+      width: 100%;
+      height: auto;
+    }
+    
+    /* 窄屏布局 - 当屏幕宽度小于768px时 */
+    @media screen and (max-width: 768px) {
+      .publication-row {
+        display: block;
+      }
+      
+      .image-cell,
+      .content-cell {
+        display: block;
+        width: 100% !important;
+        padding: 10px 20px;
+      }
+      
+      .image-cell {
+        text-align: center;
+        padding-bottom: 0;
+      }
+      
+      .pub-image {
+        max-width: 80%;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+    
+    /* 更窄的屏幕 - 当屏幕宽度小于480px时 */
+    @media screen and (max-width: 480px) {
+      .pub-image {
+        max-width: 95%;
+      }
+      
+      .image-cell,
+      .content-cell {
+        padding: 10px 15px;
+      }
     }
     
     /* 新增：博士机会通知样式 */
@@ -271,17 +322,17 @@
             </tbody>
           </table>
 
-        <table
-        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
 
-          <tr style="vertical-align:left;">
-            <td style="padding:20px;width:35%;vertical-align:center">
+          <tr class="publication-row">
+            <td class="image-cell">
               <a href="http://www.lamda.nju.edu.cn/lilh/images/codi.png" target="_blank">
-                <img src="http://www.lamda.nju.edu.cn/lilh/images/codi.png" alt="codi" width="100%">
+                <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/codi.png" alt="codi">
               </a>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:center">
+            <td class="content-cell">
 
               <papertitle>Boosting Offline MARL under Imbalanced Datasets via Compositional Diffusion Models
               </papertitle>
@@ -319,18 +370,20 @@
             </td>
           </tr>
 
-          <tr style="vertical-align:left;">
-            <td style="padding:20px;width:35%;vertical-align:center">
-              <a href="http://www.lamda.nju.edu.cn/lilh/images/semdiv.png" target="_blank">
-                <img src="http://www.lamda.nju.edu.cn/lilh/images/semdiv.png" alt="semdiv" width="100%">
-              </a>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:center">
+          
 
-              <papertitle>LLM-Assisted Semantically Diverse Teammate Generation for Efficient Multi-agent Coordination
-              </papertitle>
-
-              <br>
+              <tr class="publication-row">
+                <td class="image-cell">
+                  <a href="http://www.lamda.nju.edu.cn/lilh/images/semdiv.png" target="_blank">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/semdiv.png" alt="semdiv">
+                  </a>
+                </td>
+                <td class="content-cell">
+    
+                  <papertitle>LLM-Assisted Semantically Diverse Teammate Generation for Efficient Multi-agent Coordination
+                  </papertitle>
+    
+                  <br>
               <a href="http://www.lamda.nju.edu.cn/lilh/"><strong>Lihe Li</strong></a>,
               <a href="http://www.lamda.nju.edu.cn/yuanl/" target="_blank">Lei Yuan</a>,
               <a href="http://www.lamda.nju.edu.cn/liups/" target="_blank">Pengsen Liu</a>,
@@ -346,30 +399,32 @@
                 <a href="https://zhuanlan.zhihu.com/p/1928880661609027523" target="_blank">blog</a> / 
                 <a href="http://www.lamda.nju.edu.cn/lilh/file/poster_semdiv.pdf" target="_blank">poster</a> / 
                <a href="javascript:toggle_vis('bib_semdiv')">bibtex</a>
-                <div id="bib_semdiv" style="display:none">
-                  <code id="bib_semdiv_text" style="font-size: 10px; line-height: 0.01;">@inproceedings{semdiv,<br>
+                    <div id="bib_semdiv" style="display:none">
+                      <code id="bib_semdiv_text" style="font-size: 10px; line-height: 0.01;">@inproceedings{semdiv,<br>
 &nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{LLM-Assisted Semantically Diverse Teammate Generation for Efficient Multi-agent Coordination},<br>
 &nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Lihe Li and Lei Yuan and Pengsen Liu and Tao Jiang and Yang Yu},<br>
 &nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings of the Forty-second International Conference on Machine Learning},<br>
 &nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025}<br>
 }</code><br>
-                  <button id="bib_semdiv_button" onclick="copyText('bib_semdiv_text', 'bib_semdiv_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
-                </div>
-              <p>Instead of discovering novel teammates only at the policy level, 
-                we utilize LLMs to propose novel coordination behaviors described in natural language, 
-                and then transform them into teammate policies, enhancing teammate diversity and interpretability, 
-                eventually learning agents with language comprehension ability and stronger collaboration skills.
-              </p>
-            </td>
-          </tr>
+                      <button id="bib_semdiv_button" onclick="copyText('bib_semdiv_text', 'bib_semdiv_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
+                  <p>Instead of discovering novel teammates only at the policy level, 
+                    we utilize LLMs to propose novel coordination behaviors described in natural language, 
+                    and then transform them into teammate policies, enhancing teammate diversity and interpretability, 
+                    eventually learning agents with language comprehension ability and stronger collaboration skills.
+                  </p>
+                </td>
+              </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+
+              
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/core3.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/core3.png" alt="core3" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/core3.png" alt="core3">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Continual Multi-Objective Reinforcement Learning via Reward Model Rehearsal
                   </papertitle>
@@ -411,13 +466,14 @@
 
 
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/macop.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/macop.png" alt="macop" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/macop.png" alt="macop">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Learning to Coordinate with Anyone
                   </papertitle>
@@ -458,13 +514,13 @@
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/macpro.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/macpro.png" alt="macpro" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/macpro.png" alt="macpro">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Multi-agent Continual Coordination via Progressive Task Contextualization
                   </papertitle>
@@ -503,13 +559,13 @@
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/survey.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/survey.png" alt="survey" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/survey.png" alt="survey">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>A Survey of Progress on Cooperative Multi-agent Reinforcement Learning in Open Environment
                   </papertitle>

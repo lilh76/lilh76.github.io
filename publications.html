@@ -10,85 +10,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   
-  <!-- Keep the same styles -->
   <style>
-    .btn-green {
-      background-color: rgb(177, 235, 177);
-      color: black;
+    .publication-row {
+      display: table-row;
     }
     
-    /* New styles for the floating back button */
+    .image-cell {
+      display: table-cell;
+      padding: 20px;
+      width: 40%;
+      vertical-align: center;
+      box-sizing: border-box;
+    }
+    
+    .content-cell {
+      display: table-cell;
+      padding: 20px;
+      width: 70%; /* 注意：总宽度会超过100%，但浏览器会处理 */
+      vertical-align: center;
+      box-sizing: border-box;
+    }
+    
+    .pub-image {
+      width: 100%;
+      height: auto;
+    }
+    
+    /* 窄屏布局 - 当屏幕宽度小于768px时 */
+    @media screen and (max-width: 768px) {
+      .publication-row {
+        display: block;
+      }
+      
+      .image-cell,
+      .content-cell {
+        display: block;
+        width: 100% !important;
+        padding: 10px 20px;
+      }
+      
+      .image-cell {
+        text-align: center;
+        padding-bottom: 0;
+      }
+      
+      .pub-image {
+        max-width: 80%;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+    
+    /* 更窄的屏幕 - 当屏幕宽度小于480px时 */
+    @media screen and (max-width: 480px) {
+      .pub-image {
+        max-width: 95%;
+      }
+      
+      .image-cell,
+      .content-cell {
+        padding: 10px 15px;
+      }
+    }
+
     .floating-back-btn {
-      position: fixed; /* 固定在屏幕上 */
-      top: 20px; /* 距离顶部20px */
-      left: 20px; /* 距离左侧20px */
-      background-color: #f0f8ff;
-      border: 2px solid #4CAF50;
-      border-radius: 10px;
-      padding: 12px 10px; /* 水平方向更多内边距 */
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-left: 5px solid #4A90E2;
+      padding: 12px 18px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: all 0.3s ease;
       cursor: pointer;
-      z-index: 1000; /* 确保在最上层 */
-      max-width: 200px; /* 限制最大宽度 */
-      backdrop-filter: blur(5px); /* 毛玻璃效果 */
-      -webkit-backdrop-filter: blur(5px); /* 兼容Safari */
+      z-index: 1000;
+      max-width: 160px;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
     }
     
     .floating-back-btn:hover {
-      background-color: #e6f7ff;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(135deg, #e3e8f0 0%, #b1c1dd 100%);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.15);
       transform: translateY(-2px);
+      border-left: 5px solid #357ABD;
     }
     
     .floating-back-btn a {
       display: flex;
+      flex-direction: column;
       align-items: center;
       text-decoration: none;
       color: #2c3e50;
-      font-size: 15px;
+      font-size: 1.1em;
       font-weight: bold;
       width: 100%;
       height: 100%;
+      white-space: nowrap;
     }
     
     .floating-back-btn .emoji {
-      font-size: 15px;
+      font-size: 1.2em;
       margin: 0 5px;
     }
     
-    .floating-back-btn-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
     .floating-sub-text {
-      font-size: 12px;
-      color: #666;
-      margin-top: 4px !important;
+      margin-top: 4px;
+      color: #34495e;
+      font-size: 0.9em;
       font-weight: normal;
     }
     
-    /* 为页面内容添加左边距，避免被悬浮按钮遮挡 */
-    body {
-      padding-left: 100px; /* 为悬浮按钮留出空间 */
-    }
-    
-  </style>
+    </style>
 </head>
 
 <body>
   <div class="floating-back-btn">
     <a href="index.html">
-      <div class="floating-back-btn-content">
         <div>
-          <span class="emoji">←</span>Back to Home<span class="emoji">🏠</span>
+          <span class="emoji">←</span>Home<span class="emoji">🏠</span>
         </div>
       </div>
     </a>
   </div>
+
+  <div class="content-container">
   <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tbody>
       <tr style="padding:0px">
@@ -104,11 +152,6 @@
               </tr>
             </tbody>
           </table>
-
-          <!-- COPY YOUR EXISTING PUBLICATIONS SECTION HERE -->
-
-
-
 
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -126,13 +169,13 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
-          <tr style="vertical-align:left;">
-            <td style="padding:20px;width:35%;vertical-align:center">
+          <tr class="publication-row">
+            <td class="image-cell">
               <a href="http://www.lamda.nju.edu.cn/lilh/images/codi.png" target="_blank">
-                <img src="http://www.lamda.nju.edu.cn/lilh/images/codi.png" alt="codi" width="100%">
+                <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/codi.png" alt="codi">
               </a>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:center">
+            <td class="content-cell">
 
               <papertitle>Boosting Offline MARL under Imbalanced Datasets via Compositional Diffusion Models
               </papertitle>
@@ -170,13 +213,13 @@
             </td>
           </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/maicc.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/maicc.png" alt="maicc" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/maicc.png" alt="maicc">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Multi-agent In-context Coordination via Decentralized Memory Retrieval
                   </papertitle>
@@ -217,26 +260,31 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
         </tbody>
       </table>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
+                  <!-- <h2><b><font color="red">2021</font></b></h2> -->
                   <font size=4><em>2025</em></font>
                 </td>
               </tr>
             </tbody>
           </table>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
-                  
-          <tr style="vertical-align:left;">
-            <td style="padding:20px;width:35%;vertical-align:center">
+
+              <tr class="publication-row">
+                <td class="image-cell">
               <a href="http://www.lamda.nju.edu.cn/lilh/images/copdt.png" target="_blank">
-                <img src="http://www.lamda.nju.edu.cn/lilh/images/copdt.png" alt="copdt" width="100%">
+                <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/copdt.png" alt="copdt">
               </a>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:center">
+            <td class="content-cell">
               <papertitle>Adaptable Safe Policy Learning from Multi-task Data with Constraint Prioritized Decision Transformer</papertitle>
               <br>
               <a href="http://www.lamda.nju.edu.cn/xuerq/" target="_blank">Ruiqi Xue</a>,
@@ -263,13 +311,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
         </td>
         </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/semdiv.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/semdiv.png" alt="semdiv" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/semdiv.png" alt="semdiv">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
     
                   <papertitle>LLM-Assisted Semantically Diverse Teammate Generation for Efficient Multi-agent Coordination
                   </papertitle>
@@ -307,13 +355,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/lapse.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/lapse.png" alt="lapse" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/lapse.png" alt="lapse">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
     
                   <papertitle>Learning to Reuse Policies in State Evolvable Environments
                   </papertitle>
@@ -350,13 +398,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
                 </td>
               </tr>
               
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/madits.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/madits.png" alt="madits" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/madits.png" alt="madits">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
                   <papertitle>Efficient Multi-agent Offline Coordination via Diffusion-based Trajectory Stitching</papertitle>
                   <br>
                   <a href="http://www.lamda.nju.edu.cn/yuanl/" target="_blank">Lei Yuan</a>,
@@ -383,13 +431,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
             </td>
           </tr>
                   
-          <tr style="vertical-align:left;">
-            <td style="padding:20px;width:35%;vertical-align:center">
+          <tr class="publication-row">
+            <td class="image-cell">
               <a href="http://www.lamda.nju.edu.cn/lilh/images/haland.jpg" target="_blank">
-                <img src="http://www.lamda.nju.edu.cn/lilh/images/haland.jpg" alt="haland" width="100%">
+                <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/haland.jpg" alt="haland">
               </a>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:center">
+            <td class="content-cell">
               <papertitle>Haland: Human-AI Coordination via Policy Generation from Language-guided Diffusion</papertitle>
               <br>
               <a href="http://www.lamda.nju.edu.cn/yuanl/" target="_blank">Lei Yuan</a>,
@@ -438,13 +486,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
             <tbody>
 
               
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/diffmorl.jpg" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/diffmorl.jpg" alt="diffmorl" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/diffmorl.jpg" alt="diffmorl">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
                   <papertitle>Generalizable Offline Multi-Objective Reinforcement Learning via Preference-Conditioned Diffuser</papertitle>
                   <br>
                   <a href="http://www.lamda.nju.edu.cn/xiaoyc/" target="_blank">Yuchen Xiao</a>,
@@ -472,13 +520,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
             </td>
           </tr>
     
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/madoc.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/madoc.png" alt="madoc" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/madoc.png" alt="madoc">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Multi-Agent Domain Calibration with a Handful of Offline Data
                   </papertitle>
@@ -509,13 +557,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/dasar.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/dasar.png" alt="dasar" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/dasar.png" alt="dasar">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Dynamics Adaptive Safe Reinforcement Learning with a Misspecified Simulator
                   </papertitle>
@@ -550,13 +598,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/core3.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/core3.png" alt="core3" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/core3.png" alt="core3">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Continual Multi-Objective Reinforcement Learning via Reward Model Rehearsal
                   </papertitle>
@@ -596,13 +644,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/haplan.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/haplan.png" alt="haplan" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/haplan.png" alt="haplan">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Efficient Human-AI Coordination via Preparatory Language-based Convention
                   </papertitle>
@@ -638,13 +686,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/costa.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/costa.png" alt="costa" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/costa.png" alt="costa">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Cost-aware Offline Safe Meta Reinforcement Learning with Robust In-Distribution Online
                     Task Adaptation
@@ -702,13 +750,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/survey.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/survey.png" alt="survey" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/survey.png" alt="survey">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>A Survey of Progress on Cooperative Multi-agent Reinforcement Learning in Open Environment
                   </papertitle>
@@ -740,13 +788,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/macop.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/macop.png" alt="macop" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/macop.png" alt="macop">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Learning to Coordinate with Anyone
                   </papertitle>
@@ -787,13 +835,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/fastap.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/fastap.png" alt="fastap" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/fastap.png" alt="fastap">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Fast Teammate Adaptation in the Presence of Sudden Policy Change
                   </papertitle>
@@ -831,13 +879,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_maicc.pdf" target="_blank">po
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/romance.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/romance.png" alt="romance" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/romance.png" alt="romance">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Robust Multi-agent Coordination via Evolutionary Generation of Auxiliary Adversarial
                     Attackers
@@ -878,13 +926,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_romance.pdf" target="_blank">
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/cromac.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/cromac.png" alt="cromac" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/cromac.png" alt="cromac">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Robust Multi-agent Communication via Multi-view Message Certification
                   </papertitle>
@@ -922,13 +970,13 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_romance.pdf" target="_blank">
                 </td>
               </tr>
 
-              <tr style="vertical-align:left;">
-                <td style="padding:20px;width:35%;vertical-align:center">
+              <tr class="publication-row">
+                <td class="image-cell">
                   <a href="http://www.lamda.nju.edu.cn/lilh/images/macpro.png" target="_blank">
-                    <img src="http://www.lamda.nju.edu.cn/lilh/images/macpro.png" alt="macpro" width="100%">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/macpro.png" alt="macpro">
                   </a>
                 </td>
-                <td style="padding:20px;width:75%;vertical-align:center">
+                <td class="content-cell">
 
                   <papertitle>Multi-agent Continual Coordination via Progressive Task Contextualization
                   </papertitle>
