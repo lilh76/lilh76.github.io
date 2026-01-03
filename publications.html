@@ -16,6 +16,51 @@
       background-color: rgb(177, 235, 177);
       color: black;
     }
+    
+    /* New styles for the back to home box */
+    .back-box {
+      background-color: #f0f8ff;
+      border: 2px solid #4CAF50;
+      border-radius: 10px;
+      padding: 5px;
+      margin-bottom: 30px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer; /* 添加手型光标 */
+    }
+    
+    .back-box:hover {
+      background-color: #e6f7ff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+    }
+    
+    .back-box a {
+      display: block;
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 20px;
+      font-weight: bold;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .back-box .emoji {
+      font-size: 24px;
+      margin: 0 10px;
+    }
+    
+    .back-box-content {
+      display: inline-block; /* 保持内容居中 */
+    }
+    
+    .sub-text {
+      font-size: 16px;
+      color: #666;
+      margin-top: 8px !important;
+      font-weight: normal;
+    }
   </style>
 </head>
 
@@ -24,10 +69,14 @@
     <tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
-          <!-- Navigation back to home -->
-          <p style="text-align:left; margin-bottom:20px;">
-            <a href="index.html">← Back to Home</a>
-          </p>
+          <!-- New back to home box -->
+          <a href="index.html" style="text-decoration: none; display: block;">
+            <div class="back-box">
+              <div class="back-box-content">
+                <span class="emoji">🏠</span> Back to Home 
+              </div>
+            </div>
+          </a>
           
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
             <tbody>
@@ -908,6 +957,16 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_romance.pdf" target="_blank">
       </tr>
     </tbody>
   </table>
+
+<br>
+
+  <a href="index.html" style="text-decoration: none; display: block;">
+    <div class="back-box">
+      <div class="back-box-content">
+        <span class="emoji">🏠</span> Back to Home 
+      </div>
+    </div>
+  </a>
   
   <!-- Make sure to include the same scripts as your main page -->
   <script type="text/javascript">
