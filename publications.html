@@ -208,6 +208,27 @@
       }
     }
     
+
+      /* 添加淡蓝和淡绿的背景色 */
+      .publication-row:nth-child(odd) {
+          background-color: rgba(240, 248, 255, 0.75); /* 淡蓝色 */
+      }
+
+      .publication-row:nth-child(even) {
+          background-color: rgba(240, 255, 240, 0.75); /* 淡绿色 */
+      }
+
+      /* 可选：添加悬停效果增强视觉体验 */
+      .publication-row:hover {
+          background-color: rgba(222, 144, 96, 0.05) !important; /* 悬停时淡紫色 */
+          transition: background-color 0.3s ease;
+      }
+
+      /* 确保表格单元格继承背景色 */
+      .publication-row td {
+          background-color: inherit;
+      }
+
     </style>
 </head>
 
