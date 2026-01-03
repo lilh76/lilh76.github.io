@@ -17,66 +17,82 @@
       color: black;
     }
     
-    /* New styles for the back to home box */
-    .back-box {
+    /* New styles for the floating back button */
+    .floating-back-btn {
+      position: fixed; /* 固定在屏幕上 */
+      top: 20px; /* 距离顶部20px */
+      left: 20px; /* 距离左侧20px */
       background-color: #f0f8ff;
       border: 2px solid #4CAF50;
       border-radius: 10px;
-      padding: 5px;
-      margin-bottom: 30px;
+      padding: 12px 10px; /* 水平方向更多内边距 */
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: all 0.3s ease;
-      cursor: pointer; /* 添加手型光标 */
+      cursor: pointer;
+      z-index: 1000; /* 确保在最上层 */
+      max-width: 200px; /* 限制最大宽度 */
+      backdrop-filter: blur(5px); /* 毛玻璃效果 */
+      -webkit-backdrop-filter: blur(5px); /* 兼容Safari */
     }
     
-    .back-box:hover {
+    .floating-back-btn:hover {
       background-color: #e6f7ff;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
       transform: translateY(-2px);
     }
     
-    .back-box a {
-      display: block;
+    .floating-back-btn a {
+      display: flex;
+      align-items: center;
       text-decoration: none;
       color: #2c3e50;
-      font-size: 20px;
+      font-size: 15px;
       font-weight: bold;
       width: 100%;
       height: 100%;
     }
     
-    .back-box .emoji {
-      font-size: 24px;
-      margin: 0 10px;
+    .floating-back-btn .emoji {
+      font-size: 15px;
+      margin: 0 5px;
     }
     
-    .back-box-content {
-      display: inline-block; /* 保持内容居中 */
+    .floating-back-btn-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     
-    .sub-text {
-      font-size: 16px;
+    .floating-sub-text {
+      font-size: 12px;
       color: #666;
-      margin-top: 8px !important;
+      margin-top: 4px !important;
       font-weight: normal;
     }
+    
+    /* 为页面内容添加左边距，避免被悬浮按钮遮挡 */
+    body {
+      padding-left: 100px; /* 为悬浮按钮留出空间 */
+    }
+    
   </style>
 </head>
 
 <body>
+  <div class="floating-back-btn">
+    <a href="index.html">
+      <div class="floating-back-btn-content">
+        <div>
+          <span class="emoji">←</span>Back to Home<span class="emoji">🏠</span>
+        </div>
+      </div>
+    </a>
+  </div>
   <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
-          <!-- New back to home box -->
-          <a href="index.html" style="text-decoration: none; display: block;">
-            <div class="back-box">
-              <div class="back-box-content">
-                <span class="emoji">🏠</span> Back to Home 
-              </div>
-            </div>
-          </a>
           
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
             <tbody>
@@ -957,16 +973,6 @@ href="http://www.lamda.nju.edu.cn/lilh/file/poster_romance.pdf" target="_blank">
       </tr>
     </tbody>
   </table>
-
-<br>
-
-  <a href="index.html" style="text-decoration: none; display: block;">
-    <div class="back-box">
-      <div class="back-box-content">
-        <span class="emoji">🏠</span> Back to Home 
-      </div>
-    </div>
-  </a>
   
   <!-- Make sure to include the same scripts as your main page -->
   <script type="text/javascript">
