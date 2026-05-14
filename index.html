@@ -1,0 +1,754 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-211172484-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-211172484-2');
+  </script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Lihe Li</title>
+  <link rel="icon" href="http://www.lamda.nju.edu.cn/lilh/images/head.ico">
+  <meta name="author" content="Lihe Li">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <style>
+    .publication-row {
+      display: table-row;
+    }
+    
+    .image-cell {
+      display: table-cell;
+      padding: 20px;
+      width: 40%;
+      vertical-align: center;
+      box-sizing: border-box;
+    }
+    
+    .content-cell {
+      display: table-cell;
+      padding: 20px;
+      width: 70%; /* 注意：总宽度会超过100%，但浏览器会处理 */
+      vertical-align: center;
+      box-sizing: border-box;
+    }
+    
+    .pub-image {
+      width: 100%;
+      height: auto;
+    }
+    
+    /* 窄屏布局 - 当屏幕宽度小于768px时 */
+    @media screen and (max-width: 768px) {
+      .publication-row {
+        display: block;
+      }
+      
+      .image-cell,
+      .content-cell {
+        display: block;
+        width: 100% !important;
+        padding: 10px 20px;
+      }
+      
+      .image-cell {
+        text-align: center;
+        padding-bottom: 0;
+      }
+      
+      .pub-image {
+        max-width: 80%;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+    
+    /* 更窄的屏幕 - 当屏幕宽度小于480px时 */
+    @media screen and (max-width: 480px) {
+      .pub-image {
+        max-width: 95%;
+      }
+      
+      .image-cell,
+      .content-cell {
+        padding: 10px 15px;
+      }
+    }
+    
+  </style>
+
+</head>
+
+<script type="text/javascript">
+  function toggle_vis(id) {
+      var e = document.getElementById(id);
+      if (e.style.display == 'none')
+      e.style.display = 'block';
+      else
+      e.style.display = 'none';
+  }
+  
+  function copyText(elementId, elementId_button) {
+    // 获取code元素的HTML内容并替换HTML实体
+    var codeElement = document.getElementById(elementId);
+    var htmlContent = codeElement.innerHTML;
+    var textToCopy = htmlContent.replace(/<br>/g, "")
+                                .replace(/&nbsp;/g, " ");
+    
+    // 创建一个隐藏的文本区域元素
+    var textArea = document.createElement("textarea");
+    textArea.value = textToCopy;
+    
+    // 将文本区域元素添加到文档中
+    document.body.appendChild(textArea);
+    
+    // 选择文本区域的内容
+    textArea.select();
+    textArea.setSelectionRange(0, 99999); // 对移动设备兼容
+    
+    // 执行复制命令
+    document.execCommand("copy");
+    
+    // 移除临时的文本区域元素
+    document.body.removeChild(textArea);
+    
+    // 更改按钮的文本内容为 "Copied"
+    var buttonElement = document.getElementById(elementId_button);
+    buttonElement.innerText = "Copied";
+    buttonElement.style.backgroundColor = "#cdeeb5"; // 设置按钮背景颜色为灰色
+    
+    // 设置一个定时器，在几秒钟后将按钮的文本内容改回 "Copy"
+    setTimeout(function() {
+        buttonElement.innerText = "Copy";
+        buttonElement.style.backgroundColor = "#FFFFFF";
+    }, 2000); // 2秒后恢复
+}
+</script>
+  
+<body>
+
+  <table
+    style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:65%;vertical-align:middle">
+                  <p style="text-align:center">
+                    <name>Lihe Li  李立和</name>
+                  </p>
+
+                  <details>
+                    <summary> How to pronounce my name?</summary>
+                    <p><span style="background: #E7D8C9;">Lihe -> <i>lee-huh</i>. <br>
+                      Li -> <i>lee</i>.<br>
+                      You can just call me <strong>Lee</strong>.
+                    </span></p>
+                    
+                  </details>
+
+                  <p>
+                      Hi there, thanks for visiting my website! 
+                        I will pursue my Ph.D. at <a href="https://www.cs.utexas.edu/" target="_blank">UT Austin CS</a> starting in August 2026.
+                        Currently, I am a Master student (Sep. 2023 - Now) at the <a href="https://ai.nju.edu.cn" target="_blank">School of
+                        Artificial Intelligence</a> at <a href="https://www.nju.edu.cn/en/" target="_blank">Nanjing
+                        University</a>, where I am fortunate to be advised by Prof. <a
+                        href="http://www.lamda.nju.edu.cn/yuy" target="_blank">Yang Yu</a> and affiliated with the <a
+                        href="http://www.lamda.nju.edu.cn/MainPage.ashx" target="_blank">LAMDA</a> Group led by Prof.
+                        <a href="http://www.lamda.nju.edu.cn/zhouzh/" target="_blank">Zhi-Hua Zhou</a>. Specifically, I am a member of the <a
+                        href="https://lamda-rl.nju.edu.cn" target="_blank">LAMDA-RL</a> Group, which focuses on reinforcement learning research.
+                        Prior to that, I was an undergraduate student at the same school.
+                  </p>
+                  <p>
+                    Unity makes strength. Currently my research interest is <b>Reinforcement Learning (RL)</b>, especially in <b>Multi-agent
+                      Reinforcement Learning (MARL)</b> that enables agents efficiently, robustly and safely coordinate with other agents🤖 and even humans👨‍👩‍👧‍👦.
+                  </p>
+
+                  <p>
+                    Please feel free to drop me an Email for any form of communication or collaboration!
+                  </p>
+                  <p style="text-align:center">
+                    Email:&nbsp <b><span
+                        style="background: #d6eef8;"><code>lilh [at] lamda [dot] nju [dot] edu [dot] cn</code></span>
+                      &nbsp/
+                  </p>
+                  <p style="text-align:center">
+                    &nbsp <span style="background: #d6eef8;"><code>lilhzq76 [at] gmail [dot] com</code></b></span>
+                  </p>
+                  <p style="text-align:center">
+                    <a href="http://www.lamda.nju.edu.cn/lilh/file/CV_lilh.pdf" target="_blank">CV</a> &nbsp/&nbsp
+                    <a href="https://scholar.google.com/citations?user=q0tENOAAAAAJ&hl=zh-CN&oi=ao" target="_blank">Google Scholar</a> &nbsp/&nbsp
+                    <a href="https://www.semanticscholar.org/author/Lihe-Li/2216719801" target="_blank">Semantic Scholar</a> &nbsp/&nbsp
+                    <a href="https://dblp.org/pid/347/1926.html" target="_blank">DBLP</a> &nbsp/&nbsp
+                    <a href="https://openreview.net/profile?id=%7ELihe_Li1" target="_blank">OpenReview</a> &nbsp/&nbsp
+                    <a href="https://github.com/lilh76" target="_blank">Github</a> &nbsp/&nbsp
+                    <a href="https://twitter.com/lilh76" target="_blank">X</a>
+                  </p>
+                </td>
+
+                <td style="padding:2.5%;width:30%;max-width:30%">
+                  <div style="position: relative;">
+                    <img style="width:100%;max-width:100%" alt="profile photo"
+                      src="http://www.lamda.nju.edu.cn/lilh/images/irobot.png" class="hoverZoomLink">
+                    <div
+                      style="position: absolute; bottom: 10; width: 90%; background-color: rgb(255, 255, 255); padding: 10px;">
+                      <p style="text-align: center; margin: 0; font-size: 12.5px; color: #a6a4a4;">Just a reminder, I am
+                        the guy on the left.</p>
+                    </div>
+                  </div>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <heading>News</heading>
+                  <ul>
+                    <li> [2026.02] Thrilled to share that I will pursue my Ph.D. at <a href="https://www.cs.utexas.edu/" target="_blank">UT Austin CS</a>🇺🇸 starting in August 2026! 🤘</li>
+                    <li> [2025.12] <a href="http://www.lamda.nju.edu.cn/lilh/file/codi.pdf" target="_blank">CODI</a> was
+                      accepted to <a href="https://cyprusconferences.org/aamas2026/" target="_blank">AAMAS'26</a>!👏 Look forward to seeing you in Paphos🇨🇾!</li>
+                    <li> [2025.11] <a href="https://arxiv.org/abs/2511.10030" target="_blank">MAICC</a> was accepted to <a
+                        href="https://aaai.org/conference/aaai/aaai-26/"
+                        target="_blank">AAAI'26</a> and won an Oral! Huge congrats to Tao!👏</li>
+                    <li> [2025.09] <a href="https://www.lamda.nju.edu.cn/xuerq/file/CoPDT.pdf" target="_blank">CoPDT</a> was accepted to <a
+                        href="https://neurips.cc"
+                        target="_blank">NeurIPS'25</a>! Huge congrats to Ruiqi!👏</li>
+                    <li> [2025.05] <a href="https://openreview.net/forum?id=Vhktpw6Vid" target="_blank">SemDiv</a> was accepted to <a
+                        href="https://icml.cc"
+                        target="_blank">ICML'25</a>! Congrats to Ziqian and Bohan on the acceptance of <a href="https://openreview.net/forum?id=1R84O2Xr1k" target="_blank">Lapse</a>!👏 See you in Vancouver🇨🇦!</li>
+                    <li> [2025.01] <a href="https://openreview.net/forum?id=EpnZEzYDUT" target="_blank">MADiTS</a> was accepted to <a
+                        href="https://iclr.cc"
+                        target="_blank">ICLR'25</a>!</li>
+                    <li> [2024.09] <a href="http://www.lamda.nju.edu.cn/lilh/file/madoc.pdf" target="_blank">Madoc</a> was accepted to <a
+                        href="https://neurips.cc"
+                        target="_blank">NeurIPS'24</a>! Huge congrats to Tao!👏</li>
+                    <li> [2024.05] <a href="http://www.lamda.nju.edu.cn/lilh/file/dasar.pdf" target="_blank">DASaR</a> was accepted to <a
+                        href="https://ecmlpkdd.org/2024/"
+                        target="_blank">ECML PKDD'24</a>! Huge congrats to Ruiqi!👏</li>
+                    <li> [2024.04] <a href="https://arxiv.org/pdf/2305.13937.pdf" target="_blank">MACPro</a> was accepted to <a
+                        href="https://cis.ieee.org/publications/t-neural-networks-and-learning-systems"
+                        target="_blank">TNNLS</a>!</li>
+                    <li> [2024.04] <a href="http://www.lamda.nju.edu.cn/lilh/file/poster_core3.pdf" target="_blank">CORe3</a> was
+                      accepted to <a href="https://ijcai24.org" target="_blank">IJCAI'24</a>!👏 Look forward to seeing
+                      you
+                      in Jeju🇰🇷!</li>
+                    <li> [2023.12] <a href="http://www.lamda.nju.edu.cn/lilh/file/costa.pdf" target="_blank">COSTA</a>
+                      was accepted to <a href="https://www.aamas2024-conference.auckland.ac.nz"
+                        target="_blank">AAMAS'24</a>! See you in Auckland🇳🇿!</li>
+                    <li> [2023.12] We released <a href="https://arxiv.org/pdf/2312.01058.pdf" target="_blank"> A Survey
+                        of Progress on Cooperative MARL in Open Environment</a>. Welcome
+                      to follow our work!</li>
+                    <li> [2023.12] <a href="http://www.lamda.nju.edu.cn/lilh/file/macop.pdf" target="_blank">Macop</a>
+                      was accepted to <a href="http://www.adai.ai/dai/2023/index.html" target="_blank">DAI'23</a>🇸🇬
+                      and won the <font color="#d04000"><em><strong>Best Paper Award</strong></em></font>🏆!</li>
+
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <heading>Selected Publications [
+                    <a href="publications.html"><font size=4>Full List</font></a> / 
+                    <a href="https://scholar.google.com/citations?user=q0tENOAAAAAJ&hl=zh-CN&oi=ao" target="_blank"><font size=4>Google Scholar</font></a>
+                    ]
+                  </heading>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+
+          <tr class="publication-row">
+            <td class="image-cell">
+              <a href="http://www.lamda.nju.edu.cn/lilh/images/codi.png" target="_blank">
+                <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/codi.png" alt="codi">
+              </a>
+            </td>
+            <td class="content-cell">
+
+              <papertitle>Boosting Offline MARL under Imbalanced Datasets via Compositional Diffusion Models
+              </papertitle>
+
+              <br>
+              <a href="http://www.lamda.nju.edu.cn/lilh/"><strong>Lihe Li</strong></a>,
+              <a href="https://github.com/shshsunny" target="_blank">Shenghe Hu</a>,
+              <a>Bingxuan Lan</a>,
+              <a href="http://www.lamda.nju.edu.cn/bianyq/" target="_blank">Yuqi Bian</a>,
+              <a>Huan Zhang</a>,
+              <a>Ming Zhao</a>,
+              <a href="https://engineering.washu.edu/faculty/Chongjie-Zhang.html" target="_blank">Chongjie Zhang</a>,
+              <a href="http://www.lamda.nju.edu.cn/yuanl/" target="_blank">Lei Yuan</a>,
+              <a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK" target="_blank">Yang Yu</a>
+              <br>
+              <font color="#38b000"><em><strong>The 25rd International Conference on Autonomous Agents and
+                    Multi-Agent Systems (AAMAS), 2026</strong></em></font>
+              <br>
+              <a href="http://www.lamda.nju.edu.cn/lilh/file/codi.pdf" target="_blank">pdf</a> / 
+              <!-- <a href="http://www.lamda.nju.edu.cn/lilh/file/codi.pdf" target="_blank">link</a> /  -->
+              <a href="https://github.com/lilh76/CODI" target="_blank">code</a> / 
+              <a href="http://www.lamda.nju.edu.cn/lilh/file/poster_codi_aamas.pdf" target="_blank">poster</a> / 
+               <a href="javascript:toggle_vis('bib_codi')">bibtex</a>
+                <div id="bib_codi" style="display:none">
+                  <code id="bib_codi_text" style="font-size: 10px; line-height: 0.01;">@inproceedings{codi,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Boosting Offline MARL under Imbalanced Datasets via Compositional Diffusion Models},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Lihe Li and Shenghe Hu and Bingxuan Lan and Yuqi Bian and Huan Zhang and Ming Zhao and Chongjie Zhang and Lei Yuan and Yang Yu},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings of the International Conference on Autonomous Agents and Multiagent Systems},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2026}<br>
+}</code><br>
+                  <button id="bib_codi_button" onclick="copyText('bib_codi_text', 'bib_codi_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                </div>
+              <p>CODI addresses agent-quality imbalance in offline MARL by using LLMs and a compositional diffusion model. 
+                It decomposes team-level quality targets into fine-grained agent labels to generate balanced, 
+                high-quality trajectory segments for data augmentation. 
+                This approach effectively mitigates data imbalance and enables the learning of strong cooperative policies.
+              </p>
+            </td>
+          </tr>
+
+          
+
+              <tr class="publication-row">
+                <td class="image-cell">
+                  <a href="http://www.lamda.nju.edu.cn/lilh/images/semdiv.png" target="_blank">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/semdiv.png" alt="semdiv">
+                  </a>
+                </td>
+                <td class="content-cell">
+    
+                  <papertitle>LLM-Assisted Semantically Diverse Teammate Generation for Efficient Multi-agent Coordination
+                  </papertitle>
+    
+                  <br>
+              <a href="http://www.lamda.nju.edu.cn/lilh/"><strong>Lihe Li</strong></a>,
+              <a href="http://www.lamda.nju.edu.cn/yuanl/" target="_blank">Lei Yuan</a>,
+              <a href="http://www.lamda.nju.edu.cn/liups/" target="_blank">Pengsen Liu</a>,
+              <a href="http://www.lamda.nju.edu.cn/jiangt/" target="_blank">Tao Jiang</a>,
+              <a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK" target="_blank">Yang Yu</a>
+              <br>
+              <font color="#38b000"><em><strong>The 42rd International Conference on Machine Learning
+                    (ICML), 2025</strong></em></font>
+              <br>
+              <a href="https://openreview.net/pdf?id=Vhktpw6Vid" target="_blank">pdf</a> / 
+              <a href="https://openreview.net/forum?id=Vhktpw6Vid" target="_blank">link</a> / 
+              <a href="https://github.com/lilh76/SemDiv" target="_blank">code</a>  / 
+                <a href="https://zhuanlan.zhihu.com/p/1928880661609027523" target="_blank">blog</a> / 
+                <a href="http://www.lamda.nju.edu.cn/lilh/file/poster_semdiv.pdf" target="_blank">poster</a> / 
+               <a href="javascript:toggle_vis('bib_semdiv')">bibtex</a>
+                    <div id="bib_semdiv" style="display:none">
+                      <code id="bib_semdiv_text" style="font-size: 10px; line-height: 0.01;">@inproceedings{semdiv,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{LLM-Assisted Semantically Diverse Teammate Generation for Efficient Multi-agent Coordination},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Lihe Li and Lei Yuan and Pengsen Liu and Tao Jiang and Yang Yu},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings of the Forty-second International Conference on Machine Learning},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025}<br>
+}</code><br>
+                      <button id="bib_semdiv_button" onclick="copyText('bib_semdiv_text', 'bib_semdiv_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
+                  <p>Instead of discovering novel teammates only at the policy level, 
+                    we utilize LLMs to propose novel coordination behaviors described in natural language, 
+                    and then transform them into teammate policies, enhancing teammate diversity and interpretability, 
+                    eventually learning agents with language comprehension ability and stronger collaboration skills.
+                  </p>
+                </td>
+              </tr>
+
+
+              
+              <tr class="publication-row">
+                <td class="image-cell">
+                  <a href="http://www.lamda.nju.edu.cn/lilh/images/core3.png" target="_blank">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/core3.png" alt="core3">
+                  </a>
+                </td>
+                <td class="content-cell">
+
+                  <papertitle>Continual Multi-Objective Reinforcement Learning via Reward Model Rehearsal
+                  </papertitle>
+
+                  <br>
+                  <a href="http://www.lamda.nju.edu.cn/lilh/"><strong>Lihe Li</strong></a>,
+                  <a href="http://www.lamda.nju.edu.cn/chenrt/" target="_blank">Ruotong Chen</a>,
+                  <a href="http://www.lamda.nju.edu.cn/zhangzq/" target="_blank">Ziqian Zhang</a>,
+                  <a href="http://www.lamda.nju.edu.cn/wuzc/" target="_blank">Zhichao Wu</a>,
+                  <a href="http://www.lamda.nju.edu.cn/liyc/" target="_blank">Yi-Chen Li</a>,
+                  <a href="http://www.lamda.nju.edu.cn/guanc/" target="_blank">Cong Guan</a>,
+                  <a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK" target="_blank">Yang Yu</a>,
+                  <a href="http://www.lamda.nju.edu.cn/yuanl/" target="_blank">Lei Yuan</a>
+                  <br>
+                  <font color="#38b000"><em><strong>The 33rd International Joint Conference on Artificial Intelligence
+                        (IJCAI), 2024</strong></em></font>
+                  <br>
+                  <a href="http://www.lamda.nju.edu.cn/lilh/file/core3.pdf" target="_blank">pdf</a> / <a
+                  href="https://www.ijcai.org/proceedings/2024/490" target="_blank">link</a> / <a
+                  href="https://github.com/lilh76/CORe3" target="_blank">code</a> / <a
+                  href="https://youtu.be/_IW3upWeVps" target="_blank">talk</a> / <a
+                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_core3.pdf" target="_blank">poster</a> / <a href="javascript:toggle_vis('bib_core3')">bibtex</a>
+                    <div id="bib_core3" style="display:none">
+                      <code id="bib_core3_text" style="font-size: 10px; line-height: 0.01;">@inproceedings{core3,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Continual Multi-Objective Reinforcement Learning via Reward Model Rehearsal},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Lihe Li and Ruotong Chen and Ziqian Zhang and Zhichao Wu and Yi-Chen Li and Cong Guan and Yang Yu and Lei Yuan},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence},<br>
+&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{4434--4442},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2024}<br>
+}</code><br>
+                      <button id="bib_core3_button" onclick="copyText('bib_core3_text', 'bib_core3_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
+                  <p>We study the problem of multi-objective reinforcement learning (MORL) with continually evolving
+                    learning objectives, and propose CORe3 to enable the MORL agent rapidly learn new objectives and
+                    avoid catastrophic forgetting about old objectives lacking reward signals.
+                  </p>
+                </td>
+              </tr>
+
+
+
+
+              <tr class="publication-row">
+                <td class="image-cell">
+                  <a href="http://www.lamda.nju.edu.cn/lilh/images/macop.png" target="_blank">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/macop.png" alt="macop">
+                  </a>
+                </td>
+                <td class="content-cell">
+
+                  <papertitle>Learning to Coordinate with Anyone
+                  </papertitle>
+
+                  <br>
+                  <a href="http://www.lamda.nju.edu.cn/yuanl/" target="_blank">Lei Yuan</a>,
+                  <a href="http://www.lamda.nju.edu.cn/lilh/"><strong>Lihe Li</strong></a>,
+                  <a href="http://www.lamda.nju.edu.cn/zhangzq/" target="_blank">Ziqian Zhang</a>,
+                  <a href="http://www.lamda.nju.edu.cn/chenf/" target="_blank">Feng Chen</a>,
+                  <a href="http://www.lamda.nju.edu.cn/zhangty/" target="_blank">Tianyi Zhang</a>,
+                  <a href="http://www.lamda.nju.edu.cn/guanc/" target="_blank">Cong Guan</a>,
+                  <a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK" target="_blank">Yang Yu</a>,
+                  <a href="https://cs.nju.edu.cn/zhouzh/index.htm" target="_blank">Zhi-Hua Zhou</a>
+                  <br>
+                  <font color="#38b000"><em><strong>Proceedings of the Fifth International Conference on Distributed Artificial Intelligence (DAI),
+                      </strong></em></font>
+                  <font color="#d04000"><em><strong>Best Paper Award</strong></em></font><font color="#38b000"><em><strong>, 2023 </strong></em></font>
+                  <br>
+                  <a href="http://www.lamda.nju.edu.cn/lilh/file/macop.pdf" target="_blank">pdf</a> / <a
+                    href="https://dl.acm.org/doi/10.1145/3627676.3627678" target="_blank">link</a> / <a
+                    href="https://github.com/lilh76/Macop" target="_blank">code</a> / <a
+                    href="https://youtu.be/1a32LLUB9II" target="_blank">English talk</a> / <a
+                    href="https://www.bilibili.com/video/BV1KK411e7WJ/" target="_blank">Chinese talk</a> / <a href="javascript:toggle_vis('bib_macop')">bibtex</a>
+                    <div id="bib_macop" style="display:none">
+                      <code id="bib_macop_text" style="font-size: 10px; line-height: 0.01;">@inproceedings{macop,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Learning to Coordinate with Anyone},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Lei Yuan and Lihe Li and Ziqian Zhang and Feng Chen and Tianyi Zhang and Cong Guan and Yang Yu and Zhi-Hua Zhou},<br>
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings of the Fifth International Conference on Distributed Artificial Intelligence},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2023}<br>
+}</code><br>
+  <button id="bib_macop_button" onclick="copyText('bib_macop_text', 'bib_macop_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+</div>
+                  <p>We propose Multi-agent Compatible Policy Learning (MACOP), where we adopt an agent-centered
+                    teammate generation process that gradually and efficiently generates diverse teammates covering the
+                    teammate policy space, and we use continual learning to train the ego agents to coordinate with them
+                    and acquire strong coordination ability.
+                  </p>
+                </td>
+              </tr>
+
+              <tr class="publication-row">
+                <td class="image-cell">
+                  <a href="http://www.lamda.nju.edu.cn/lilh/images/macpro.png" target="_blank">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/macpro.png" alt="macpro">
+                  </a>
+                </td>
+                <td class="content-cell">
+
+                  <papertitle>Multi-agent Continual Coordination via Progressive Task Contextualization
+                  </papertitle>
+
+                  <br>
+                  <a href="http://www.lamda.nju.edu.cn/yuanl/" target="_blank">Lei Yuan</a>,
+                  <a href="http://www.lamda.nju.edu.cn/lilh/"><strong>Lihe Li</strong></a>,
+                  <a href="http://www.lamda.nju.edu.cn/zhangzq/" target="_blank">Ziqian Zhang</a>,
+                  <a href="http://www.lamda.nju.edu.cn/zhangfx/" target="_blank">Fuxiang Zhang</a>,
+                  <a href="http://www.lamda.nju.edu.cn/guanc/" target="_blank">Cong Guan</a>,
+                  <a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK" target="_blank">Yang Yu</a>
+                  <br>
+                  <font color="#38b000"><em><strong>IEEE Transactions on Neural Networks and Learning Systems
+                        (TNNLS)</strong></em></font>
+                  <br>
+                  <a href="http://www.lamda.nju.edu.cn/lilh/file/macpro.pdf" target="_blank">pdf</a> / <a
+                    href="https://ieeexplore.ieee.org/document/10562331" target="_blank">link</a> / <a
+                    href="https://github.com/lilh76/MACPro" target="_blank">code</a> / <a
+                    href="http://www.lamda.nju.edu.cn/lilh/file/poster_macpro.pdf" target="_blank">poster</a> / <a href="javascript:toggle_vis('bib_macpro')">bibtex</a>
+                    <div id="bib_macpro" style="display:none">
+                      <code id="bib_macpro_text" style="font-size: 10px; line-height: 0.01;">@article{macpro,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;=&nbsp;{Multi-agent Continual Coordination via Progressive Task Contextualization},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;=&nbsp;{Lei Yuan and Lihe Li and Ziqian Zhang and Fuxiang Zhang and Cong Guan and Yang Yu},<br>
+&nbsp;&nbsp;journal&nbsp;=&nbsp;{IEEE Transactions on Neural Networks and Learning Systems},<br>
+&nbsp;&nbsp;volume&nbsp;&nbsp;=&nbsp;{36},<br>
+&nbsp;&nbsp;number&nbsp;&nbsp;=&nbsp;{4},<br>
+&nbsp;&nbsp;pages&nbsp;&nbsp;&nbsp;=&nbsp;{6326-6340},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025}<br>
+}</code><br>
+                      <button id="bib_macpro_button" onclick="copyText('bib_macpro_text', 'bib_macpro_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
+                  <p>We formulate the continual coordination framework and propose MACPro to enable agents to
+                    continually coordinate with each other when the dynamic of the training task and the multi-agent
+                    system itself changes over time.
+                  </p>
+                </td>
+              </tr>
+
+              <tr class="publication-row">
+                <td class="image-cell">
+                  <a href="http://www.lamda.nju.edu.cn/lilh/images/survey.png" target="_blank">
+                    <img class="pub-image" src="http://www.lamda.nju.edu.cn/lilh/images/survey.png" alt="survey">
+                  </a>
+                </td>
+                <td class="content-cell">
+
+                  <papertitle>A Survey of Progress on Cooperative Multi-agent Reinforcement Learning in Open Environment
+                  </papertitle>
+
+                  <br>
+                  <a href="http://www.lamda.nju.edu.cn/yuanl/" target="_blank">Lei Yuan</a>,
+                  <a href="http://www.lamda.nju.edu.cn/zhangzq/" target="_blank">Ziqian Zhang</a>,
+                  <a href="http://www.lamda.nju.edu.cn/lilh/"><strong>Lihe Li</strong></a>,
+                  <a href="http://www.lamda.nju.edu.cn/guanc/" target="_blank">Cong Guan</a>,
+                  <a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK" target="_blank">Yang Yu</a>
+                  <br>
+                  <font color="#38b000"><em><strong>Science China Information Sciences (SCIS)</strong></em></font>
+                  <br>
+                  <a href="https://arxiv.org/pdf/2312.01058.pdf" target="_blank">pdf in English</a> / <a
+                    href="http://www.lamda.nju.edu.cn/lilh/file/openmarl.pdf" target="_blank">pdf in Chinese</a> / <a
+                    href="https://arxiv.org/abs/2312.01058" target="_blank">link</a> / <a href="javascript:toggle_vis('bib_survey')">bibtex</a>
+                    <div id="bib_survey" style="display:none">
+                      <code id="bib_survey_text" style="font-size: 10px; line-height: 0.01;">@article{survey,<br>
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;=&nbsp;{A Survey of Progress on Cooperative Multi-agent Reinforcement Learning in Open Environment},<br>
+&nbsp;&nbsp;author&nbsp;&nbsp;=&nbsp;{Lei Yuan and Ziqian Zhang and Lihe Li and Cong Guan and Yang Yu},<br>
+&nbsp;&nbsp;journal&nbsp;=&nbsp;{Science China Information Sciences (SCIS)},<br>
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2023}<br>
+}</code><br>
+                      <button id="bib_survey_button" onclick="copyText('bib_survey_text', 'bib_survey_button')" style="border-radius: 10px; background-color: white; cursor: pointer; border: 1.5px solid #aeaeae;">Copy</button>
+                    </div>
+                  <p>We review multi-agent cooperation from closed environment to open environment settings, and provide
+                    prospects for future development and research directions of cooperative MARL in open environments.
+                  </p>
+                </td>
+              </tr>
+                  
+            </tbody>
+          </table>
+
+          
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <heading>Education</heading>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table width="90%" align="center" border="0" cellpadding="20">
+            <tbody>
+
+              <tr>
+                <a href="http://www.nju.edu.cn/" target="_blank">
+                  <td style="padding:20px;width:25%;vertical-align:middle"><img
+                      src="http://www.lamda.nju.edu.cn/lilh/images/nju.jpg" width="40%"></td>
+                </a>
+                <td width="70%" valign="center">
+                  <b>Nanjing University</b>
+                  <br> 2023.09 - present<br>
+                  <br> <b>Master Student in Computer Science and Technology</b>
+                  <br> Advisor: Prof. <a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK" target="_blank">Yang Yu</a>
+                </td>
+              </tr>
+
+              <tr>
+                <a href="http://www.nju.edu.cn/" target="_blank">
+                  <td style="padding:20px;width:25%;vertical-align:middle"><img
+                      src="http://www.lamda.nju.edu.cn/lilh/images/nju.jpg" width="40%"></td>
+                </a>
+                <td width="70%" valign="center">
+                  <b>Nanjing University</b>
+                  <br> 2019.09 - 2023.07<br>
+                  <br> <b>Undergraduate Student in Artificial Intelligence</b>
+                  <br> Advisor: Prof. <a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK" target="_blank">Yang Yu</a>
+                </td>
+              </tr>
+
+              <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle"><img src="http://www.lamda.nju.edu.cn/lilh/images/zhaozhong.jpeg" width="43%" ></td>
+            <td width="70%" valign="center">
+              <b>Guangdong Zhaoqing Middle School</b>
+              <br> 2016.09 - 2019.06<br>
+              <br> High School Education
+            </td>
+          </tr>
+
+            </tbody>
+          </table>
+
+
+
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Awards & Honors</heading>
+                  <ul>
+                    <li>Outstanding Graduate of Nanjing University, 2026.</li>
+                    <li>BYD Scholarship, 2025 (CNY 20,000).</li>
+                    <li>First-Class Academic Scholarship, 2025 (CNY 12,000).</li>
+                    <li><strong>National Scholarship</strong>, 2024 (CNY 20,000). [<a href="https://mp.weixin.qq.com/s/HwRXVZUTUEQk-rpCcH3ozA" target="_blank">link</a>]</li>
+                    <li>First-Class Academic Scholarship, 2024 (CNY 10,000).</li>
+                    <li><strong>Best Paper Award</strong> of The Fifth Distributed Artificial Intelligence Conference (DAI), 2023. [<a href="http://www.lamda.nju.edu.cn/lilh/images/best_paper.jpg" target="_blank">link</a>]</li>
+                    <li>Outstanding Graduate & Bachelor's Thesis of Nanjing University, 2023.</li>
+                    <li>The Egret Scholarship, 2022 (CNY 10,000).</li>
+                    <li>The People's Scholarship, 2021, 2020.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Service</heading>
+                  <ul>
+                    <li><strong>Reviewer</strong>: ICML (2025), NeurIPS (2025, 2026), ICLR (2025, 2026), COLM (2025, 2026).</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Teaching Assistant</heading>
+                  <ul>
+                    <li><a href="https://www.lamda.nju.edu.cn/introAI/index.html" target="_blank">Introduction to Artificial Intelligence</a> (with Prof. <a href="http://www.lamda.nju.edu.cn/yuy" target="_blank">Yang Yu</a>; for undergraduate students, Fall, 2024).</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <heading>Miscellaneous</heading>
+                  <ul>
+                    <li>I have the fortune to work with brilliant people during my
+                      research journey and I am truly grateful for their guidance and help!
+                    </li>
+                    <li>My Chinese name, 李立和 (Li Lihe), can be pronounced as /liː ˈliː hɜː/ in Mandarin or /lei
+                      ˈlʌb wɔː/ in Cantonese. 李 is one of the most common surnames in China, 立 means "stand" or "establish", and 和 means "harmony" and "peace".</li>
+                    <li>I enjoy singing and I am a Tenor of the <a
+                        href="https://mp.weixin.qq.com/s/OT2wBp_uanK1RSlUYBno5g">Nanjing University Chorus</a>🎼. I was
+                      even awarded as an <a href="http://www.lamda.nju.edu.cn/lilh/images/chorus.jpg" target="_blank">Outstanding
+                        Person</a> in the first year😆!</li>
+                    <li>I enjoy working out, like going to the gym💪 and playing basketball🏀. Crazy about 
+                      <a href="https://en.wikipedia.org/wiki/Prince_(musician)" target="_blank">Prince</a><img src="http://www.lamda.nju.edu.cn/lilh/images/prince.ico" style="width: 12px; height: 12px; vertical-align: middle;">, 
+                      <a href="https://en.wikipedia.org/wiki/MyGO!!!!!" target="_blank">MyGO!!!!!</a><img src="http://www.lamda.nju.edu.cn/lilh/images/mygo.ico" style="height: 12px; vertical-align: middle;">, and 
+                      <a href="https://en.wikipedia.org/wiki/K-On!" target="_blank">K-ON!</a><img src="http://www.lamda.nju.edu.cn/lilh/images/kon.ico" style="height: 12px; vertical-align: top;"> lately.
+                      <!-- I also  
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/2077.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/two.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/ds3.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/ring.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/wukong.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/rdr2.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/witcher3.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/bl3.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/nfs.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/ds.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/gta5.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/ods.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/ori.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/oc.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/fg.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/ow.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/lol.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/sc2.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/san11.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/zsgws.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      <img src="http://www.lamda.nju.edu.cn/lilh/images/games/cf.ico" style="width: 13px; height: 13px; vertical-align: middle;"> 
+                      ... -->
+                    </li>
+                    <li>I play the <a href="http://www.lamda.nju.edu.cn/lilh/images/guitar.jpg" target="_blank">guitar🎸</a> in a band called <a href="http://www.lamda.nju.edu.cn/lilh/images/band.jpg" target="_blank">仙の林受虐狂</a>, 
+                      rehearsing songs like <a href="https://www.bilibili.com/video/BV1WTv4BKE1s/?p=3" target="_blank">more than words</a>, 
+                      <a href="https://www.bilibili.com/video/BV1WTv4BKE1s/?p=4" target="_blank">カノジョ</a>, 
+                      <a href="https://www.bilibili.com/video/BV1WTv4BKE1s/?p=6" target="_blank">ギブス</a>, 
+                      <a href="https://www.bilibili.com/video/BV1WTv4BKE1s/?p=5" target="_blank">丸の内サディスティック</a>, 
+                      <a href="https://www.bilibili.com/video/BV1WTv4BKE1s/?p=1" target="_blank">猛独が襲う (MyGO!!!!! cover ver.)</a>, 
+                      <a href="https://www.bilibili.com/video/BV1WTv4BKE1s/?p=2" target="_blank">クリスマスソング</a>, 
+                      and so on.</li>
+                    <li>This website template was stolen from my good friend <a
+                        href="http://zhaoxuan.info">Zhaoxuan</a>. Appreciate that🫡.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <script type='text/javascript' id='clustrmaps'
+            src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=299&t=tt&d=7Dviv0NyC7wkr6VOqbc0Hyf8FcsQP8SxSOOBwVzTCBE'></script>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:0px">
+                    <br>
+                    <p style="text-align:right;font-size:small;">
+                      Template courtesy: <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+  </table>
+  </td>
+  </tr>
+  </table>
+</body>
+
+
+
+
+</html>
