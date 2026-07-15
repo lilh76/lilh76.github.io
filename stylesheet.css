@@ -89,18 +89,18 @@ strong {
   font-size: 14px;
 }
 
-heading {
+.section-heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
 }
 
-papertitle {
+.paper-title {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700
 }
 
-name {
+.person-name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
@@ -128,4 +128,344 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+/* --------------------------------------------------------------------------
+ * Shared page layout
+ * -------------------------------------------------------------------------- */
+
+.page-table {
+  width: 100%;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.full-width-table {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.section-heading-cell {
+  width: 100%;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.profile-copy-cell {
+  width: 65%;
+  padding: 2.5%;
+  vertical-align: middle;
+}
+
+.pronunciation-guide {
+  background: #E7D8C9;
+}
+
+.email-highlight {
+  background: #d6eef8;
+}
+
+.profile-photo-cell {
+  width: 30%;
+  max-width: 30%;
+  padding: 2.5%;
+}
+
+.profile-photo-wrapper {
+  position: relative;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 90%;
+}
+
+.profile-caption {
+  position: absolute;
+  bottom: 10;
+  width: 90%;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.profile-caption p {
+  margin: 0;
+  color: #a6a4a4;
+  font-size: 12.5px;
+  text-align: center;
+}
+
+.education-logo-cell {
+  width: 25%;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+.inline-icon {
+  height: 12px;
+  vertical-align: middle;
+}
+
+.inline-icon-square {
+  width: 12px;
+}
+
+.inline-icon-top {
+  vertical-align: top;
+}
+
+.footer-note {
+  font-size: small;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+ * Publication cards and BibTeX controls
+ * -------------------------------------------------------------------------- */
+
+.publication-row {
+  display: table-row;
+}
+
+.image-cell {
+  display: table-cell;
+  box-sizing: border-box;
+  width: 40%;
+  padding: 20px;
+  vertical-align: center;
+}
+
+.content-cell {
+  display: table-cell;
+  box-sizing: border-box;
+  width: 70%;
+  padding: 20px;
+  vertical-align: center;
+}
+
+.pub-image {
+  width: 100%;
+  height: auto;
+}
+
+.bibtex-entry {
+  display: none;
+}
+
+.bibtex-code {
+  font-size: 10px;
+  line-height: 0.01;
+}
+
+.copy-button {
+  cursor: pointer;
+  background-color: white;
+  border: 1.5px solid #aeaeae;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .publication-row {
+    display: block;
+  }
+
+  .image-cell,
+  .content-cell {
+    display: block;
+    width: 100% !important;
+    padding: 10px 20px;
+  }
+
+  .image-cell {
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .pub-image {
+    width: auto;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pub-image {
+    max-width: 95%;
+  }
+
+  .image-cell,
+  .content-cell {
+    padding: 10px 15px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Full publications page
+ * -------------------------------------------------------------------------- */
+
+.floating-back-btn {
+  position: fixed;
+  z-index: 1000;
+  top: 20px;
+  left: 20px;
+  max-width: 160px;
+  padding: 12px 18px;
+  cursor: pointer;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-left: 5px solid #4A90E2;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.floating-back-btn:hover {
+  background: linear-gradient(135deg, #e3e8f0 0%, #b1c1dd 100%);
+  border-left: 5px solid #357ABD;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.floating-back-btn a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #2c3e50;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.floating-back-btn .emoji {
+  margin: 0 5px;
+  font-size: 1.2em;
+}
+
+.floating-sub-text {
+  margin-top: 4px;
+  color: #34495e;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1200px) {
+  .floating-back-btn {
+    top: auto !important;
+    right: 20px !important;
+    bottom: 20px !important;
+    left: auto !important;
+    max-width: 140px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: none !important;
+  }
+
+  .floating-back-btn:hover {
+    transform: translateY(-2px) !important;
+  }
+
+  .floating-back-btn a {
+    font-size: 1em;
+  }
+
+  .floating-back-btn .emoji {
+    font-size: 1.1em;
+  }
+
+  .floating-sub-text {
+    margin-top: 2px;
+    font-size: 0.85em;
+  }
+
+  .publications-page .publication-row {
+    display: block;
+  }
+
+  .publications-page .image-cell,
+  .publications-page .content-cell {
+    display: block;
+    width: 100% !important;
+    padding: 10px 20px;
+  }
+
+  .publications-page .image-cell {
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .publications-page .pub-image {
+    width: auto;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .floating-back-btn {
+    right: 15px !important;
+    bottom: 15px !important;
+    max-width: 120px;
+    padding: 8px 12px;
+  }
+
+  .floating-back-btn a {
+    font-size: 0.95em;
+  }
+
+  .floating-back-btn .emoji {
+    font-size: 1em;
+  }
+
+  .floating-sub-text {
+    margin-top: 1px;
+    font-size: 0.8em;
+  }
+
+  .publications-page .pub-image {
+    max-width: 95%;
+  }
+
+  .publications-page .image-cell,
+  .publications-page .content-cell {
+    padding: 10px 15px;
+  }
+}
+
+.publications-page .publication-row:nth-child(odd) {
+  background-color: rgba(240, 248, 255, 0.75);
+}
+
+.publications-page .publication-row:nth-child(even) {
+  background-color: rgba(240, 255, 240, 0.75);
+}
+
+.publications-page .publication-row:hover {
+  background-color: rgba(222, 144, 96, 0.05) !important;
+  transition: background-color 0.3s ease;
+}
+
+.publications-page .publication-row td {
+  background-color: inherit;
 }
