@@ -235,6 +235,10 @@ span.highlight {
   text-align: right;
 }
 
+.visitor-map {
+  text-align: center;
+}
+
 /* --------------------------------------------------------------------------
  * Publication cards and BibTeX controls
  * -------------------------------------------------------------------------- */
