@@ -1,0 +1,740 @@
+[
+  {
+    "source": "1.jpg",
+    "output": "1.jpg.jpg",
+    "source_size": [
+      1440,
+      1920
+    ],
+    "crop_xywh": [
+      93,
+      0,
+      1311,
+      1920
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910417,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "2.png",
+    "output": "2.png.jpg",
+    "source_size": [
+      1674,
+      2578
+    ],
+    "crop_xywh": [
+      0,
+      126,
+      1674,
+      2452
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.951125,
+    "full_height_preserved": false,
+    "full_width_preserved": true
+  },
+  {
+    "source": "IMG_1100.HEIC",
+    "output": "IMG_1100.HEIC.jpg",
+    "source_size": [
+      6048,
+      8064
+    ],
+    "crop_xywh": [
+      60,
+      0,
+      5504,
+      8064
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910053,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1105.HEIC",
+    "output": "IMG_1105.HEIC.jpg",
+    "source_size": [
+      4284,
+      5712
+    ],
+    "crop_xywh": [
+      0,
+      0,
+      3899,
+      5712
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910131,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1107.HEIC",
+    "output": "IMG_1107.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      1308,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1155.HEIC",
+    "output": "IMG_1155.HEIC.jpg",
+    "source_size": [
+      4032,
+      3024
+    ],
+    "crop_xywh": [
+      1085,
+      0,
+      2064,
+      3024
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1218.HEIC",
+    "output": "IMG_1218.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      1365,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1276.HEIC",
+    "output": "IMG_1276.HEIC.jpg",
+    "source_size": [
+      8064,
+      6048
+    ],
+    "crop_xywh": [
+      0,
+      0,
+      4128,
+      6048
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1277.HEIC",
+    "output": "IMG_1277.HEIC.jpg",
+    "source_size": [
+      8064,
+      6048
+    ],
+    "crop_xywh": [
+      557,
+      0,
+      4128,
+      6048
+    ],
+    "subject_clipped": true,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1364.HEIC",
+    "output": "IMG_1364.HEIC.jpg",
+    "source_size": [
+      4284,
+      5712
+    ],
+    "crop_xywh": [
+      0,
+      0,
+      3899,
+      5712
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910131,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1506.HEIC",
+    "output": "IMG_1506.HEIC.jpg",
+    "source_size": [
+      6048,
+      8064
+    ],
+    "crop_xywh": [
+      544,
+      0,
+      5504,
+      8064
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910053,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1619.HEIC",
+    "output": "IMG_1619.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      0,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1734.HEIC",
+    "output": "IMG_1734.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      994,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1882.JPG",
+    "output": "IMG_1882.JPG.jpg",
+    "source_size": [
+      1080,
+      1920
+    ],
+    "crop_xywh": [
+      0,
+      246,
+      1080,
+      1582
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.823958,
+    "full_height_preserved": false,
+    "full_width_preserved": true
+  },
+  {
+    "source": "IMG_1942.HEIC",
+    "output": "IMG_1942.HEIC.jpg",
+    "source_size": [
+      4284,
+      5712
+    ],
+    "crop_xywh": [
+      85,
+      0,
+      3899,
+      5712
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910131,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_1969.HEIC",
+    "output": "IMG_1969.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      1423,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_2787.HEIC",
+    "output": "IMG_2787.HEIC.jpg",
+    "source_size": [
+      4032,
+      3024
+    ],
+    "crop_xywh": [
+      1044,
+      0,
+      2064,
+      3024
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_3090.HEIC",
+    "output": "IMG_3090.HEIC.jpg",
+    "source_size": [
+      4032,
+      3024
+    ],
+    "crop_xywh": [
+      1851,
+      0,
+      2064,
+      3024
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_3905.HEIC",
+    "output": "IMG_3905.HEIC.jpg",
+    "source_size": [
+      3024,
+      4032
+    ],
+    "crop_xywh": [
+      91,
+      0,
+      2752,
+      4032
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910053,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_4111.HEIC",
+    "output": "IMG_4111.HEIC.jpg",
+    "source_size": [
+      8064,
+      6048
+    ],
+    "crop_xywh": [
+      2210,
+      0,
+      4128,
+      6048
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_5079.HEIC",
+    "output": "IMG_5079.HEIC.jpg",
+    "source_size": [
+      6048,
+      8064
+    ],
+    "crop_xywh": [
+      302,
+      0,
+      5504,
+      8064
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910053,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_5084.HEIC",
+    "output": "IMG_5084.HEIC.jpg",
+    "source_size": [
+      8064,
+      6048
+    ],
+    "crop_xywh": [
+      315,
+      0,
+      4128,
+      6048
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_5109.HEIC",
+    "output": "IMG_5109.HEIC.jpg",
+    "source_size": [
+      6048,
+      8064
+    ],
+    "crop_xywh": [
+      544,
+      0,
+      5504,
+      8064
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910053,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_5249.HEIC",
+    "output": "IMG_5249.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      1994,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_5304.heic",
+    "output": "IMG_5304.heic.jpg",
+    "source_size": [
+      8064,
+      4536
+    ],
+    "crop_xywh": [
+      3532,
+      0,
+      3096,
+      4536
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.383929,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_5384.HEIC",
+    "output": "IMG_5384.HEIC.jpg",
+    "source_size": [
+      4032,
+      3024
+    ],
+    "crop_xywh": [
+      903,
+      0,
+      2064,
+      3024
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_5518.HEIC",
+    "output": "IMG_5518.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      1451,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_5611.heic",
+    "output": "IMG_5611.heic.jpg",
+    "source_size": [
+      4284,
+      5712
+    ],
+    "crop_xywh": [
+      192,
+      0,
+      3899,
+      5712
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910131,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6116.HEIC",
+    "output": "IMG_6116.HEIC.jpg",
+    "source_size": [
+      4032,
+      3024
+    ],
+    "crop_xywh": [
+      843,
+      0,
+      2064,
+      3024
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6247.HEIC",
+    "output": "IMG_6247.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      1166,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6257.HEIC",
+    "output": "IMG_6257.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      423,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6301.HEIC",
+    "output": "IMG_6301.HEIC.jpg",
+    "source_size": [
+      4032,
+      3024
+    ],
+    "crop_xywh": [
+      137,
+      0,
+      2064,
+      3024
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6336.HEIC",
+    "output": "IMG_6336.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      137,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6380.HEIC",
+    "output": "IMG_6380.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      252,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6388.HEIC",
+    "output": "IMG_6388.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      823,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6399.HEIC",
+    "output": "IMG_6399.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      0,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6913.HEIC",
+    "output": "IMG_6913.HEIC.jpg",
+    "source_size": [
+      4284,
+      5712
+    ],
+    "crop_xywh": [
+      0,
+      0,
+      3899,
+      5712
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910131,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6914.HEIC",
+    "output": "IMG_6914.HEIC.jpg",
+    "source_size": [
+      3024,
+      4032
+    ],
+    "crop_xywh": [
+      0,
+      0,
+      2752,
+      4032
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910053,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_6916.HEIC",
+    "output": "IMG_6916.HEIC.jpg",
+    "source_size": [
+      4284,
+      5712
+    ],
+    "crop_xywh": [
+      0,
+      0,
+      3899,
+      5712
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.910131,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_7159.HEIC",
+    "output": "IMG_7159.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      794,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  },
+  {
+    "source": "IMG_7168.HEIC",
+    "output": "IMG_7168.HEIC.jpg",
+    "source_size": [
+      5712,
+      4284
+    ],
+    "crop_xywh": [
+      594,
+      0,
+      2924,
+      4284
+    ],
+    "subject_clipped": false,
+    "retained_area": 0.511905,
+    "full_height_preserved": true,
+    "full_width_preserved": false
+  }
+]

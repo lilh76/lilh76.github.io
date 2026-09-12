@@ -1,0 +1,374 @@
+{
+  "description": "Visually reviewed plush-doll bounding boxes. Normalized [left, top, right, bottom] after image autorotation. Some originals already cut off the body; those boxes end at the image edge. 1.jpg includes the supporting longhorn plush. Not an automatic detector.",
+  "images": {
+    "1.jpg": {
+      "sha256": "493e699a140ef6253635e5bd4c570952df17a2ff3103e86f7e10c573710e3cc8",
+      "box": [
+        0.16,
+        0.05,
+        0.88,
+        0.91
+      ]
+    },
+    "2.png": {
+      "sha256": "2e31c2ac603e65c104808e8dec0665f4d3f0a8a05d67afe2c379b5619b3146c1",
+      "box": [
+        0.1,
+        0.42,
+        0.9,
+        1
+      ]
+    },
+    "IMG_1100.HEIC": {
+      "sha256": "e7bfe92ce6c508bd326d49f962706b68d065a162e45d466f14365730a993f873",
+      "box": [
+        0.1,
+        0.1,
+        0.83,
+        0.91
+      ]
+    },
+    "IMG_1105.HEIC": {
+      "sha256": "62db80f159c25c6f5813c0f56234069ba113f771c6e4ee6a3698e0dae820b18e",
+      "box": [
+        0.1,
+        0.45,
+        0.52,
+        0.91
+      ]
+    },
+    "IMG_1107.HEIC": {
+      "sha256": "e69b30458eeead81bf2b812f4aca8ba6cff673e8776db4d0c141ad52ed65896f",
+      "box": [
+        0.35,
+        0.44,
+        0.62,
+        0.91
+      ]
+    },
+    "IMG_1155.HEIC": {
+      "sha256": "c27f767e462293f4a5df1d93b78d225bdc30f5aaff307758ff8e93215b40a511",
+      "box": [
+        0.38,
+        0.53,
+        0.67,
+        1
+      ]
+    },
+    "IMG_1218.HEIC": {
+      "sha256": "040fec638158e7fc904f9150515475cfe7755b0fa9397f5bf39e6809088fa7f4",
+      "box": [
+        0.3,
+        0.15,
+        0.69,
+        0.9
+      ]
+    },
+    "IMG_1276.HEIC": {
+      "sha256": "924d9bfb351a46091b2bcec2cfe91c482c95bbdced9cb5a343582faaf849f374",
+      "box": [
+        0.05,
+        0.03,
+        0.46,
+        0.81
+      ]
+    },
+    "IMG_1277.HEIC": {
+      "sha256": "4978df2f97c8cfe73b4526e94fe392f9c57eac47dd29c34ed306c11649689042",
+      "box": [
+        0.06,
+        0.01,
+        0.59,
+        0.98
+      ]
+    },
+    "IMG_1364.HEIC": {
+      "sha256": "88ec7af1936c99cd11946fac54f3ef657818ba18c42f0e8d1ce199845241398a",
+      "box": [
+        0.02,
+        0.38,
+        0.81,
+        1
+      ]
+    },
+    "IMG_1506.HEIC": {
+      "sha256": "ea3a7ffb46c4ee272dcc26ab1ec9c79925ca0e0637773ca60a912ff9b9e97704",
+      "box": [
+        0.34,
+        0.23,
+        1,
+        1
+      ]
+    },
+    "IMG_1619.HEIC": {
+      "sha256": "678875c150824f0ad97507e3bd4a92554d83ca9f8b7b6b1856d9dc21832e51f3",
+      "box": [
+        0.01,
+        0.14,
+        0.44,
+        1
+      ]
+    },
+    "IMG_1734.HEIC": {
+      "sha256": "40b2dec76026ab985d7fb13945de5272fb57624ef7a47ee9e51fb56d9e257763",
+      "box": [
+        0.19,
+        0.38,
+        0.67,
+        1
+      ]
+    },
+    "IMG_1882.JPG": {
+      "sha256": "9be9d7f8c02488059b7b7c3d1f90651346884714a2d5c93ab793f8ad455cca73",
+      "box": [
+        0,
+        0.22,
+        0.77,
+        0.86
+      ]
+    },
+    "IMG_1942.HEIC": {
+      "sha256": "b235ee12155729b774f0a1c96793a95a661d185e1de5af8949218683245cc935",
+      "box": [
+        0.31,
+        0.64,
+        0.64,
+        0.98
+      ]
+    },
+    "IMG_1969.HEIC": {
+      "sha256": "500d386da689da9aac37eb36919726b7945b8957fcf7fe24a5ffbb23dc2b150d",
+      "box": [
+        0.31,
+        0.64,
+        0.7,
+        1
+      ]
+    },
+    "IMG_2787.HEIC": {
+      "sha256": "6bc3401efc1156dc1888118adeb798d2a420c3cae4e0a6d25fc19d8467a0af26",
+      "box": [
+        0.37,
+        0.55,
+        0.66,
+        1
+      ]
+    },
+    "IMG_3090.HEIC": {
+      "sha256": "4fe2f9afc266cd7d0cf0478b3385f917f7c87e7144dfbfd67e8776da6740b2fb",
+      "box": [
+        0.49,
+        0.34,
+        0.94,
+        1
+      ]
+    },
+    "IMG_3905.HEIC": {
+      "sha256": "264e63d21f3fa11f01459f8fbed596ca687dc6b92350d2a31be4fa0ac6d5f746",
+      "box": [
+        0.34,
+        0.38,
+        0.63,
+        0.65
+      ]
+    },
+    "IMG_4111.HEIC": {
+      "sha256": "3b9f80e80d3d12075dae1a6098befb16b040528cf3f1c38273dca7de02b93198",
+      "box": [
+        0.33,
+        0.3,
+        0.73,
+        1
+      ]
+    },
+    "IMG_5079.HEIC": {
+      "sha256": "bab064c289f3138b7796dad38c464a407327b01acc4ee68138af0f88ee829777",
+      "box": [
+        0.28,
+        0.57,
+        0.73,
+        0.99
+      ]
+    },
+    "IMG_5084.HEIC": {
+      "sha256": "93bfc440bc27d1d64e7190677089b6cb08d0dc1568afb17083f252bcfa5fcc83",
+      "box": [
+        0.15,
+        0.64,
+        0.44,
+        1
+      ]
+    },
+    "IMG_5109.HEIC": {
+      "sha256": "71cfeca08aa14c8fe56917440cec7d510f1d40572cbfd6b4c282025c7e2d9447",
+      "box": [
+        0.44,
+        0.42,
+        0.94,
+        0.96
+      ]
+    },
+    "IMG_5249.HEIC": {
+      "sha256": "32073b8dd7e36ac4c99a4dba0cefdd177226bd98b39fb40ceb0a3760edbba676",
+      "box": [
+        0.46,
+        0.5,
+        0.75,
+        1
+      ]
+    },
+    "IMG_5304.heic": {
+      "sha256": "02280f8ac4231c0e27e678964cbab39ec3ede1f00260b346b88709f895c7766b",
+      "box": [
+        0.48,
+        0.46,
+        0.78,
+        1
+      ]
+    },
+    "IMG_5384.HEIC": {
+      "sha256": "53eae2548ac40412625a81143ce02142f2df884627d5d7cfcfbbed6e83b9f115",
+      "box": [
+        0.38,
+        0.66,
+        0.58,
+        1
+      ]
+    },
+    "IMG_5518.HEIC": {
+      "sha256": "16beaeef51960bd2b5f5dd0bc36dbedf4967645ef9e3687ecf2a7a15c1867f57",
+      "box": [
+        0.4,
+        0.76,
+        0.62,
+        1
+      ]
+    },
+    "IMG_5611.heic": {
+      "sha256": "ddd7caa0dcad8dec20c125cb98228397840b745764b38757ebad8678e7623bda",
+      "box": [
+        0.25,
+        0.45,
+        0.75,
+        1
+      ]
+    },
+    "IMG_6116.HEIC": {
+      "sha256": "c9ec8b5fc9f38c5f8038ac6572dc058801f3cb2e25c044cd246986ed97646bc3",
+      "box": [
+        0.35,
+        0.42,
+        0.58,
+        0.92
+      ]
+    },
+    "IMG_6247.HEIC": {
+      "sha256": "f75ce048e195ecd7c9b9a41b4aea35126b9ebdae1008503f61f6f988e2c0a5a4",
+      "box": [
+        0.25,
+        0.34,
+        0.67,
+        1
+      ]
+    },
+    "IMG_6257.HEIC": {
+      "sha256": "b576bab87acc234f12ca5a163eb13f0222d37d876e7c15e11bf60608845de5b7",
+      "box": [
+        0.16,
+        0.52,
+        0.5,
+        1
+      ]
+    },
+    "IMG_6301.HEIC": {
+      "sha256": "c09436e148bf627d5dd29cdf25eb8bb8be87bcc1a393948947887f53235c41ed",
+      "box": [
+        0.12,
+        0.46,
+        0.46,
+        1
+      ]
+    },
+    "IMG_6336.HEIC": {
+      "sha256": "3b0c92a1494b8b73ace0e0d19e479d8b997134e062e21cca607612bea5675fc8",
+      "box": [
+        0.08,
+        0.52,
+        0.48,
+        1
+      ]
+    },
+    "IMG_6380.HEIC": {
+      "sha256": "960083f905d3fe989eae4585e6cce4a4fed4a65cc3f85f7303b3b86aa189d46d",
+      "box": [
+        0.1,
+        0.53,
+        0.5,
+        1
+      ]
+    },
+    "IMG_6388.HEIC": {
+      "sha256": "fc0cffd4afe4c5d43345ed90f6068e844cfcc3ddf18ea77797d32a0bb8591b85",
+      "box": [
+        0.23,
+        0.56,
+        0.57,
+        1
+      ]
+    },
+    "IMG_6399.HEIC": {
+      "sha256": "52b14ab456866fe7b8c1e2d72289d96e724fb0e13b41d69a186b9000d20f34aa",
+      "box": [
+        0.04,
+        0.52,
+        0.38,
+        0.98
+      ]
+    },
+    "IMG_6913.HEIC": {
+      "sha256": "aace3dafc21bec3cccf50db5546948bdef129bfa5cf7932d6809bbe421b63a63",
+      "box": [
+        0.06,
+        0.72,
+        0.4,
+        1
+      ]
+    },
+    "IMG_6914.HEIC": {
+      "sha256": "5de82780315ff585afc2b8977fd21f0a286440e1147cf9cd7999d50ce60e2a95",
+      "box": [
+        0,
+        0.58,
+        0.44,
+        1
+      ]
+    },
+    "IMG_6916.HEIC": {
+      "sha256": "c0036fb4114585612d0759a0fdc1467b737db3dfe8b2301090dccf182353536f",
+      "box": [
+        0.03,
+        0.66,
+        0.4,
+        1
+      ]
+    },
+    "IMG_7159.HEIC": {
+      "sha256": "209ac3fd74786cbd6b5d7b7cfd737dd209bd129feec98b1af810ebe59de2c5eb",
+      "box": [
+        0.21,
+        0.53,
+        0.58,
+        1
+      ]
+    },
+    "IMG_7168.HEIC": {
+      "sha256": "456bf638337ce3e2b87af5174bbbef5aaa7e7733c80d59582b58acab646c1677",
+      "box": [
+        0.2,
+        0.52,
+        0.52,
+        1
+      ]
+    }
+  }
+}
