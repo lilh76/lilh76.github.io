@@ -51,10 +51,12 @@
   const originalAlt = photo.alt;
   const originalCaption = caption.textContent;
   let hoverId = 0;
+  let hoverCount = 0;
 
   photo.addEventListener('mouseenter', () => {
     const currentHover = ++hoverId;
-    if (Math.random() >= 0.1) return;
+    hoverCount = (hoverCount + 1) % 5;
+    if (hoverCount !== 0) return;
 
     const replacement = new Image();
     replacement.onload = () => {
