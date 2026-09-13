@@ -83,38 +83,81 @@
     });
   }
   let showingTomori = false;
-  let hoverId = 0;
+  let requestId = 0;
   let hoverCount = 0;
+  let tapCount = 0;
+  let activationMode = null;
+  let lastPointerType = '';
+  const dismissedClicks = new WeakSet();
 
-  photo.addEventListener('mouseenter', () => {
-    const currentHover = ++hoverId;
-    hoverCount = (hoverCount + 1) % 5;
-    if (hoverCount !== 0) return;
+  const restorePhoto = () => {
+    ++requestId;
+    activationMode = null;
+    showingTomori = false;
+    photo.style.cursor = originalCursor;
+    photo.src = originalSrc;
+    photo.alt = originalAlt;
+    caption.textContent = originalCaption;
+  };
 
+  const showTomori = (mode) => {
+    const currentRequest = ++requestId;
+    activationMode = mode;
     const replacement = new Image();
     replacement.onload = () => {
-      if (currentHover !== hoverId) return;
+      if (currentRequest !== requestId) return;
       photo.src = replacement.src;
       photo.alt = 'Takamatsu Tomori';
       caption.textContent = 'Takamatsu Tomori desu...';
       showingTomori = true;
       photo.style.cursor = 'pointer';
     };
+    replacement.onerror = () => {
+      if (currentRequest === requestId) restorePhoto();
+    };
     replacement.src = tomoriImages[Math.floor(Math.random() * tomoriImages.length)];
+  };
+
+  // Pointer events avoid counting touch browsers' simulated mouse hover events.
+  photo.addEventListener('pointerenter', (event) => {
+    if (event.pointerType !== 'mouse' || activationMode === 'touch') return;
+    hoverCount = (hoverCount + 1) % 5;
+    if (hoverCount === 0) showTomori('mouse');
   });
 
+  photo.addEventListener('pointerdown', (event) => {
+    lastPointerType = event.pointerType;
+  });
+
+  // Capture runs before the photo's click handler. The fifth tap opens Tomori;
+  // the next click anywhere closes it without counting as a new first tap.
+  document.addEventListener('click', (event) => {
+    if (activationMode !== 'touch') return;
+    dismissedClicks.add(event);
+    restorePhoto();
+  }, true);
+
   photo.addEventListener('click', (event) => {
-    if (event.button !== 0 || !showingTomori) return;
+    if (event.button !== 0 || dismissedClicks.has(event)) return;
+    const pointerType = event.pointerType || lastPointerType;
+    const isTouch = pointerType === 'touch' || pointerType === 'pen' ||
+      (!pointerType && window.matchMedia('(hover: none)').matches);
+    if (isTouch) {
+      tapCount = (tapCount + 1) % 5;
+      if (tapCount === 0) showTomori('touch');
+      return;
+    }
+    if (!showingTomori) return;
     tomoriAudio.currentTime = 0;
     playMusic();
   });
 
-  photo.addEventListener('mouseleave', () => {
-    ++hoverId;
-    showingTomori = false;
-    photo.style.cursor = originalCursor;
-    photo.src = originalSrc;
-    photo.alt = originalAlt;
-    caption.textContent = originalCaption;
+  photo.addEventListener('pointerleave', (event) => {
+    if (event.pointerType === 'mouse' && activationMode === 'mouse') restorePhoto();
   });
+
+  // Capture also catches scrolling inside a nested scrollable element.
+  document.addEventListener('scroll', () => {
+    if (activationMode === 'touch') restorePhoto();
+  }, { capture: true, passive: true });
 })();
