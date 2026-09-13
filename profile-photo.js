@@ -50,6 +50,10 @@
   const originalSrc = photo.getAttribute('src');
   const originalAlt = photo.alt;
   const originalCaption = caption.textContent;
+  const originalCursor = photo.style.cursor;
+  const tomoriAudio = new Audio('data/images/tomori-cropped-wide/hitoshizuku-mygo-op.mp3');
+  tomoriAudio.preload = 'none';
+  let showingTomori = false;
   let hoverId = 0;
   let hoverCount = 0;
 
@@ -64,12 +68,24 @@
       photo.src = replacement.src;
       photo.alt = 'Takamatsu Tomori';
       caption.textContent = 'Takamatsu Tomori desu...';
+      showingTomori = true;
+      photo.style.cursor = 'pointer';
     };
     replacement.src = tomoriImages[Math.floor(Math.random() * tomoriImages.length)];
   });
 
+  photo.addEventListener('click', (event) => {
+    if (event.button !== 0 || !showingTomori) return;
+    tomoriAudio.currentTime = 0;
+    tomoriAudio.play().catch((error) => {
+      console.warn('Unable to play Tomori audio:', error);
+    });
+  });
+
   photo.addEventListener('mouseleave', () => {
     ++hoverId;
+    showingTomori = false;
+    photo.style.cursor = originalCursor;
     photo.src = originalSrc;
     photo.alt = originalAlt;
     caption.textContent = originalCaption;
