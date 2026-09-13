@@ -53,6 +53,34 @@
   const originalCursor = photo.style.cursor;
   const tomoriAudio = new Audio('data/images/tomori-cropped-wide/hitoshizuku-mygo-op.mp3');
   tomoriAudio.preload = 'none';
+  const musicToggle = document.querySelector('.profile-music-toggle');
+  const playMusic = () => {
+    tomoriAudio.play().catch((error) => {
+      console.warn('Unable to play Tomori audio:', error);
+    });
+  };
+  if (musicToggle) {
+    const updateMusicToggle = () => {
+      const playing = !tomoriAudio.paused && !tomoriAudio.ended;
+      musicToggle.textContent = playing ? 'Ⅱ' : '▶';
+      const label = playing ? 'Pause music' : 'Play music';
+      musicToggle.setAttribute('aria-label', label);
+      musicToggle.title = label;
+    };
+    tomoriAudio.addEventListener('playing', () => {
+      musicToggle.hidden = false;
+      updateMusicToggle();
+    });
+    tomoriAudio.addEventListener('pause', updateMusicToggle);
+    tomoriAudio.addEventListener('ended', updateMusicToggle);
+    musicToggle.addEventListener('click', () => {
+      if (tomoriAudio.paused || tomoriAudio.ended) {
+        playMusic();
+      } else {
+        tomoriAudio.pause();
+      }
+    });
+  }
   let showingTomori = false;
   let hoverId = 0;
   let hoverCount = 0;
@@ -77,9 +105,7 @@
   photo.addEventListener('click', (event) => {
     if (event.button !== 0 || !showingTomori) return;
     tomoriAudio.currentTime = 0;
-    tomoriAudio.play().catch((error) => {
-      console.warn('Unable to play Tomori audio:', error);
-    });
+    playMusic();
   });
 
   photo.addEventListener('mouseleave', () => {

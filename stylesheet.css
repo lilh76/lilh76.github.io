@@ -196,6 +196,32 @@ span.highlight {
   max-width: 90%;
 }
 
+.profile-music-toggle {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: #fff;
+  color: #555;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  z-index: 1;
+}
+
+.profile-music-toggle:hover {
+  background: #f0f0f0;
+}
+
+.profile-music-toggle:focus-visible {
+  outline: 2px solid #1772d0;
+  outline-offset: 2px;
+}
+
 .profile-caption {
   position: absolute;
   bottom: 10;
