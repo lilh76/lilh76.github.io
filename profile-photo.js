@@ -53,6 +53,7 @@
   const originalCursor = photo.style.cursor;
   const tomoriAudio = new Audio('data/images/tomori-cropped-wide/hitoshizuku-mygo-op.mp3');
   tomoriAudio.preload = 'none';
+  tomoriAudio.loop = true;
   const musicToggle = document.querySelector('.profile-music-toggle');
   const playMusic = () => {
     tomoriAudio.play().catch((error) => {
