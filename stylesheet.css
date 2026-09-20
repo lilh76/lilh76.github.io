@@ -134,6 +134,21 @@ span.highlight {
  * Shared page layout
  * -------------------------------------------------------------------------- */
 
+.home-page {
+  isolation: isolate;
+  background-color: #fff;
+}
+
+.home-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("data/images/mygo.png") center / 90vw auto no-repeat;
+  opacity: 0.12;
+}
+
 .page-table {
   width: 100%;
   max-width: 900px;
@@ -227,7 +242,7 @@ span.highlight {
   bottom: 10;
   width: 90%;
   padding: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
 }
 
 .profile-caption p {
@@ -241,6 +256,11 @@ span.highlight {
   width: 25%;
   padding: 20px;
   vertical-align: middle;
+}
+
+/* Let the page background show through the white areas of school logos. */
+.home-page .education-logo-cell img {
+  mix-blend-mode: multiply;
 }
 
 .inline-icon {
