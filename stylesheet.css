@@ -266,6 +266,7 @@ span.highlight {
 .inline-icon {
   height: 12px;
   vertical-align: middle;
+  mix-blend-mode: multiply;
 }
 
 .inline-icon-square {
