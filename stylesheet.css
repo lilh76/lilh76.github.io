@@ -146,7 +146,7 @@ span.highlight {
   z-index: -1;
   pointer-events: none;
   background: url("data/images/mygo.png") center / 90vw auto no-repeat;
-  opacity: 0.12;
+  opacity: 0.06;
 }
 
 .page-table {
